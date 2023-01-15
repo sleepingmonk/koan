@@ -1,0 +1,21 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'brow--' ~ variant : 'brow--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'brow',
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {# Use composable layout classes as needed. #}
+  {# Use BEM syntax if needed for styling classes. #}
+  {% if part_one %}
+    <span class="brow__accent">{{ part_one }}</span>
+  {% endif %}
+  {% if part_two %}
+    | <span class="brow__secondary">{{ part_two }}</span>
+  {% endif %}
+</div>

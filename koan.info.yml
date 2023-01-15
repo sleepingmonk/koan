@@ -1,0 +1,19 @@
+name: Koan
+type: theme
+description: 'Drupal theme with Storybook, using algorithmic layout.'
+core_version_requirement: ^8 || ^9 || ^10
+base theme: false
+
+libraries:
+  - koan/global
+
+regions:
+  header: Header
+  navigation: Navigation
+  messaging: Messaging
+  title: Title
+  tabs: Tabs
+  content: Content
+  secondary_footer: Secondary Footer
+  drawer: Drawer
+  footer: Footer

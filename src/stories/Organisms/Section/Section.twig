@@ -1,0 +1,86 @@
+{# Set brow and heading tags based on if they're first component or not. #}
+{# Subordinate heading to brow if present. #}
+{% if first_component %}
+  {% set h = brow ? 'h2' : 'h1' %}
+{% else %}
+  {% set h = brow ? 'h3' : 'h2' %}
+{% endif %}
+
+{% set variant_justify = content_justify
+  ? 'section--justify-' ~ content_justify
+  : 'section--justify-center' %}
+
+{% set variant_align = content_align
+  ? 'section--align-' ~ content_align
+  : 'section--align-center' %}
+
+{% set variant_class = variant ? 'section--color-' ~ variant : 'section--color-default' %}
+
+{# Create class array #}
+{% set classes = [
+  'section',
+  variant_justify,
+  variant_align,
+  variant_class,
+] %}
+
+{# 
+ # Due to a lack of support in twigjs-loader, we need to define possible
+ # sub components. The maintainer will not support variables for template 
+ # parameter in include statements.
+ #
+ # i.e. {% include this_var_breaks_things with this_var_is_fine %}
+ #
+ # This would NOT break in Drupal, but in order for this to work in Storybook
+ # we need to specify the include with if statements. It's better to have
+ # this complexity in pattern library, rather than when integrating with 
+ # Drupal.
+ #
+ # https://github.com/twigjs/twig.js/issues/806
+ #
+ # @todo: Try to add support and PR or fork the twigjs-loader package.
+ #}
+{% set sub_component %}
+  {% if sub_component_template == 'Card' %}
+    {% include "@molecules/Card/Card.twig" with sub_component_data %}
+  {% endif %}
+  {% if sub_component_template == 'Cards' %}
+    {% include "@organisms/Cards/Cards.twig" with sub_component_data %}
+  {% endif %}
+  {% if sub_component_template == 'TeaserPlusList' %}
+    {% include "@organisms/TeaserPlusList/TeaserPlusList.twig" with sub_component_data %}
+  {% endif %}
+{% endset %}
+
+{% if sub_component|trim == "" %}
+  {% set sub_component %}
+    <div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>
+  {% endset %}
+{% endif %}
+
+{# Section Template #}
+<div {{ attributes.addClass(classes) }}>
+  <div class="section__content container">
+    <div class="section__header center stack" style="--space: var(--s0):">
+      {% if brow_data %}
+        {% include "@atoms/Brow/Brow.twig" with brow_data %}
+      {% endif %}
+      {% if heading %}
+        <{{h}}>{{ heading }}</{{h}}>
+      {% endif %}
+      {% if text %}
+        {{ text }}
+      {% endif %}
+    </div>
+    <div class="section__main">
+      {% if sub_component|trim %}
+        {{ sub_component }}
+      {% endif %}
+    </div>
+    {% if button_data %}
+      <div class="section__button center">
+        {% include "@atoms/Button/Button.twig" with button_data %}
+      </div>
+    {% endif %}
+  </div>
+</div>
