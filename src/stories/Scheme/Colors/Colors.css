@@ -1,5 +1,3 @@
-.colors {}
-
 .color__group + .color__group {
   margin-top: var(--s5);
 }
