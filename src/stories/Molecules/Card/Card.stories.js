@@ -62,5 +62,5 @@ MediaRight.args = data.media_right;
 export const Overlay = Template.bind({});
 Overlay.args = data.overlay;
 
-export const Striped = Template.bind({});
-Striped.args = data.striped;
+export const Icon = Template.bind({});
+Icon.args = data.icon;

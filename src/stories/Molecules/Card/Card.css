@@ -23,13 +23,13 @@
 /* Bordered Center */
 .card--bordered-center .card,
 .card.card--bordered-center {
-  border: var(--s-2) solid var(--color-accent-warm-light-x);
+  border: var(--s-2) solid var(--color-base-light-x);
 }
 
 .card--bordered-center > div {
   height: 100%;
   width: 100%;
-  border: 1px dashed var(--color-base);
+  border: 1px solid var(--color-base);
 }
 
 .card--bordered-center .card__main {
@@ -95,9 +95,9 @@
   z-index: 1;
 }
 
-/* Striped */
-.card--striped .card,
-.card.card--striped {
+/* Icon */
+.card--icon .card,
+.card.card--icon {
   --color: var(--color-white);
   --heading-color: var(--color-white);
   --align-items: center;
@@ -116,16 +116,10 @@
   text-align: center;
   text-decoration: none;
 
-  background: repeating-linear-gradient(
-    125deg,
-    var(--color-primary-dark-x),
-    var(--color-primary-dark-x) 1px,
-    var(--color-primary-dark-xx) 2px,
-    var(--color-primary-dark-xx) 8px
-  );
+  background: var(--color-primary-dark-xx);
 }
 
-.card--striped .card .box,
-.card.card--striped .box {
+.card--icon .card .box,
+.card.card--icon .box {
   padding: 0;
 }

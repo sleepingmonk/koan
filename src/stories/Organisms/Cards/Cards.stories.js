@@ -23,7 +23,7 @@ export default {
       description: "We can set the `Card` variant at the `Cards` wrapper level for consistency within a group of cards.",
       table: {defaultValue: {summary: "default"}},
       control: { type: 'select' },
-      options: ['default', 'bordered-center', 'media-left', 'media-right', 'striped', 'overlay'],
+      options: ['default', 'bordered-center', 'media-left', 'media-right', 'icon', 'overlay'],
     },  
     items: {
       table: {
@@ -46,5 +46,5 @@ MediaLeft.args = data.media_left;
 export const MediaRight = Template.bind({});
 MediaRight.args = data.media_right;
 
-export const Striped = Template.bind({});
-Striped.args = data.striped;
+export const Icon = Template.bind({});
+Icon.args = data.icon;

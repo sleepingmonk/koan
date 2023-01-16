@@ -40,6 +40,3 @@ Default.args = data.default;
 
 export const DafaultWithDate = Template.bind({});
 DafaultWithDate.args = data.default_with_date;
-
-export const Heading = Template.bind({});
-Heading.args = data.heading;

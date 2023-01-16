@@ -65,11 +65,8 @@ Default.args = data.default;
 export const PrimaryDarkXX = Template.bind({});
 PrimaryDarkXX.args = data.primary_dark_xx;
 
-export const PrimaryDarkXXStripe = Template.bind({});
-PrimaryDarkXXStripe.args = data.primary_dark_xx_stripe;
-
-export const WarmDarkX = Template.bind({});
-WarmDarkX.args = data.warm_dark_x;
+export const WarmLightXX = Template.bind({});
+WarmLightXX.args = data.warm_light_xx;
 
 export const White = Template.bind({});
 White.args = data.white;

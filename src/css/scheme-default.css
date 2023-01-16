@@ -32,88 +32,36 @@
   --color-white: #ffffff;
   --color-black: #000000;
   
-  --color-base-dark-xxx: #2E2E2E;
-  --color-base-dark-xx: #454545;
-  --color-base-dark-x: #5C5C5C;
-  --color-base: #919191;
-  --color-base-light-x: #C9C9C9;
-  --color-base-light-xx: #F3F3F3;
-  --color-base-light-xxx: #F9F9F9;
+  --color-base-dark-xxx: #3D3D3D;
+  --color-base-dark-xx: #525252;
+  --color-base-dark-x: #666666;
+  --color-base: #7A7A7A;
+  --color-base-light-x: #8F8F8F;
+  --color-base-light-xx: #A3A3A3;
+  --color-base-light-xxx: #B8B8B8;
   
-  --color-accent-warm-dark-xxx: #775540;
-  --color-accent-warm-dark-xx: #655A3DB2;
-  --color-accent-warm-dark-x: #C05600;
-  --color-accent-warm-dark-5: #d57513;
-  --color-accent-warm: #FF8B2D;
-  --color-accent-warm-light-x: #FEF2E4;
+  --color-accent-warm-dark-xx: #FFBC1F;
+  --color-accent-warm-dark-x: #FFC847;
+  --color-accent-warm: #FFD470;
+  --color-accent-warm-light-x: #FFE099;
+  --color-accent-warm-light-xx: #FFEDC2;
   
-  --color-primary-dark-xx: #1F303E;
-  --color-primary-dark-x: #0B4778;
-  --color-primary: #005EA2;
-  --color-primary-light-x: #2378C3;
-  --color-primary-light-xx: #25B6E2;
-  --color-primary-light-xxx: #EFF6FB;
+  --color-primary-dark-xx: #5BC9D7;
+  --color-primary-dark-x: #7CD4DF;
+  --color-primary: #9CDEE7;
+  --color-primary-light-x: #5BC9D7;
+  --color-primary-light-xx: #DEF4F7;
   
-  --color-secondary-dark-xx: #204E34;
-  --color-secondary-dark-x: #286846;
-  --color-secondary: #34A37E;
-  --color-secondary-light-x: #3db37e;
-  --color-secondary-light-xx: #4BD6A7;
-
-  /* Striped Backgrounds */
-
-  --striped-primary-dark-xx: repeating-linear-gradient(
-    125deg,
-    var(--color-primary-dark-x),
-    var(--color-primary-dark-x) 1px,
-    var(--color-primary-dark-xx) 2px,
-    var(--color-primary-dark-xx) 8px
-  );
-
-  --striped-primary-dark-x: repeating-linear-gradient(
-    125deg,
-    var(--color-primary),
-    var(--color-primary) 1px,
-    var(--color-primary-dark-x) 2px,
-    var(--color-primary-dark-x) 8px
-  );
-
-  --striped-secondary: repeating-linear-gradient(
-    125deg,
-    var(--color-secondary-light-x),
-    var(--color-secondary-light-x) 1px,
-    var(--color-secondary) 2px,
-    var(--color-secondary) 8px
-  );
-
-  --striped-accent-warm-dark-x: repeating-linear-gradient(
-    125deg,
-    var(--color-accent-warm-dark-5),
-    var(--color-accent-warm-dark-5) 1px,
-    var(--color-accent-warm-dark-x) 1px,
-    var(--color-accent-warm-dark-x) 8px
-  );
-
-  --striped-secondary-dark-xx: repeating-linear-gradient(
-    125deg,
-    var(--color-secondary-dark-x),
-    var(--color-secondary-dark-x) 1px,
-    var(--color-secondary-dark-xx) 1px,
-    var(--color-secondary-dark-xx) 8px
-  );
-
-  --striped-primary-light-xx: repeating-linear-gradient(
-    125deg,
-    #2fBfEf,
-    #2fBfEf 1px,
-    var(--color-primary-light-xx) 1px,
-    var(--color-primary-light-xx) 8px
-  );
+  --color-secondary-dark-xx: #992F1E;
+  --color-secondary-dark-x: #BB3925;
+  --color-secondary: #D74833;
+  --color-secondary-light-x: #DD6755;
+  --color-secondary-light-xx: #E48577;
 
   /* Contextual variable: can be overridden at the component level to affect accent elements within. */
   --bg: transparent;
   --heading-color: var(--color-primary-dark-xx);
-  --accent-color: var(--color-accent-warm-dark-x);
+  --accent-color: var(--color-primary-dark-x);
   --color: var(--color-black);
   --button-fg: var(--accent-color);
   --border-thin: 1px;

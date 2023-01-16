@@ -117,13 +117,13 @@ export default {
     ],
     attributes: new drupalAttribute(),
   },
-  striped: {
+  icon: {
     variant: "",
     card_width: "45ch",
     card_variant: "",
     items: [
       {
-        variant: "striped",
+        variant: "icon",
         media: false,
         icon_data: {
           icon: "flame",
@@ -140,7 +140,7 @@ export default {
         attributes: new drupalAttribute(),
       },
       {
-        variant: "striped",
+        variant: "icon",
         media: false,
         icon_data: {
           icon: "flame",
@@ -157,7 +157,7 @@ export default {
         attributes: new drupalAttribute(),
       },
       {
-        variant: "striped",
+        variant: "icon",
         media: false,
         icon_data: {
           icon: "flame",
@@ -174,7 +174,7 @@ export default {
         attributes: new drupalAttribute(),
       },
       {
-        variant: "striped",
+        variant: "icon",
         media: false,
         icon_data: {
           icon: "flame",
@@ -191,7 +191,7 @@ export default {
         attributes: new drupalAttribute(),
       },
       {
-        variant: "striped",
+        variant: "icon",
         media: false,
         icon_data: {
           icon: "flame",
@@ -208,7 +208,7 @@ export default {
         attributes: new drupalAttribute(),
       },
       {
-        variant: "striped",
+        variant: "icon",
         media: false,
         icon_data: {
           icon: "flame",

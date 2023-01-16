@@ -20,8 +20,8 @@ In the Center example, `.stack` is responsible for the margins between the sub e
   }
   ```
   ```
-  .card--striped .card,
-  .card.card--striped {
+  .card--icon .card,
+  .card.card--icon {
       --align-items: center;
       ...
   }

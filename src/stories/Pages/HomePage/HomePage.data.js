@@ -20,11 +20,11 @@ export default {
       attributes: new drupalAttribute()
     },
     section_1: {
-      variant: 'primary-dark-xx-stripe',
+      variant: 'primary-dark-xx',
       brow_data: {
         part_one: "Section With Card",
         part_two: false,
-        variant: 'heading',
+        variant: 'default',
         attributes: new drupalAttribute(),
       },
       heading: false,
@@ -53,13 +53,13 @@ export default {
         cardWidth: "45ch",
         items: [
           {
-            variant: "striped",
+            variant: "icon",
             icon_data: {
               icon: "flame",
               color: false,
               attributes: new drupalAttribute(),
             },
-            heading: "Card:striped",
+            heading: "Card:icon",
             text: false,
             button_data: {
               label: "Button",
@@ -74,14 +74,14 @@ export default {
               color: false,
               attributes: new drupalAttribute(),
             },
-            heading: "Card:striped",
+            heading: "Card:icon",
             text: false,
             button_data: {
               label: "Button",
               href: "#",
               variant: "primary",
             },
-            variant: "striped",
+            variant: "icon",
             attributes: new drupalAttribute(),
           },
           {
@@ -90,14 +90,14 @@ export default {
               color: false,
               attributes: new drupalAttribute(),
             },
-            heading: "Card:striped",
+            heading: "Card:icon",
             text: false,
             button_data: {
               label: "Button",
               href: "#",
               variant: "primary",
             },
-            variant: "striped",
+            variant: "icon",
             attributes: new drupalAttribute(),
           },
           {
@@ -106,14 +106,14 @@ export default {
               color: false,
               attributes: new drupalAttribute(),
             },
-            heading: "Card:striped",
+            heading: "Card:icon",
             text: false,
             button_data: {
               label: "Button",
               href: "#",
               variant: "primary",
             },
-            variant: "striped",
+            variant: "icon",
             attributes: new drupalAttribute(),
           },
         ],

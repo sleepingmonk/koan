@@ -39,38 +39,22 @@
   background: var(--color-primary-dark-xx);
 }
 
-.section--color-primary-dark-xx-stripe {
-  --color: var(--color-white);
-  --accent-color: var(--color-accent-warm);
-  --heading-color: var(--color-white);
-  --button-fg: var(--accent-color);
-
-  background: repeating-linear-gradient(
-    125deg,
-    #2F505E,
-    #2F404E 1px,
-    var(--color-primary-dark-xx) 2px,
-    var(--color-primary-dark-xx) 8px
-  )
-}
-
 .section--color-warm-dark-xx {
   --color: var(--color-white);
   --accent-color: var(--color-white);
   background: var(--color-accent-warm-dark-xx);
 }
 
-.section--color-warm-dark-x {
+.section--color-warm-light-xx {
   --color: var(--color-black);
   --accent-color: var(--color-accent-warm-dark-x);
-  background: var(--color-accent-warm-light-x);
+  background: var(--color-accent-warm-light-xx);
 }
 
 /* Drop padding when two sections of the same background are touching. */
 .section--color-default + .section--color-default,
 .section--color-warm-dark-x + .section--color-warm-dark-x,
 .section--color-warm-dark-xx + .section--color-warm-dark-xx,
-.section--color-primary-dark-xx-stripe + .section--color-primary-dark-xx-stripe,
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {
   padding-top: 0;
 }
