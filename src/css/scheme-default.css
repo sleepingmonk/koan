@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Zen+Loop&display=swap');
 
 /* Variables. */
 :root {
   /* Scale */
-  --ratio: 1.26;
+  --ratio: 1.30;
   --s-6: calc(var(--s-5) / var(--ratio));
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -18,20 +18,20 @@
   --s5: calc(var(--s4) * var(--ratio));
   --s6: calc(var(--s5) * var(--ratio));
   --s7: calc(var(--s6) * var(--ratio));
-  
+
   /* Content spacing. */
   --measure: 60ch;
   --max-width: 126ch;
   --min-width: 40ch;
 
   /* Fonts */
-  --font-primary: 'Inter', sans-serif;
-  --font-secondary: 'Lato', sans-serif;
-  
+  --font-primary: 'Zen Loop', sans-serif;
+  --font-secondary: 'Indie Flower', sans-serif;
+
   /* Colors */
   --color-white: #ffffff;
   --color-black: #000000;
-  
+
   --color-base-dark-xxx: #3D3D3D;
   --color-base-dark-xx: #525252;
   --color-base-dark-x: #666666;
@@ -39,19 +39,19 @@
   --color-base-light-x: #8F8F8F;
   --color-base-light-xx: #A3A3A3;
   --color-base-light-xxx: #B8B8B8;
-  
+
   --color-accent-warm-dark-xx: #FFBC1F;
   --color-accent-warm-dark-x: #FFC847;
   --color-accent-warm: #FFD470;
   --color-accent-warm-light-x: #FFE099;
   --color-accent-warm-light-xx: #FFEDC2;
-  
+
   --color-primary-dark-xx: #5BC9D7;
   --color-primary-dark-x: #7CD4DF;
   --color-primary: #9CDEE7;
-  --color-primary-light-x: #5BC9D7;
+  --color-primary-light-x: #BDE9EF;
   --color-primary-light-xx: #DEF4F7;
-  
+
   --color-secondary-dark-xx: #992F1E;
   --color-secondary-dark-x: #BB3925;
   --color-secondary: #D74833;

@@ -1,21 +1,10 @@
 <!-- This is the general documentation layout. Add or remove any sections as needed, but try to stay consistent across components. -->
 # Colors
 
-Description of the Colors in markdown.
+## Notes for Storybook
 
-<details>
-  <summary>Inherited CSS Variables:</summary>
-  - `--name`: description...
-</details>
+These color swatches are dynamically generated based on the CSS custom properties defined in the `*-scheme.css` file. It looks for `--color-*` variables.
 
-<details>
-  <summary>Twig Variables:</summary>
-  ```
-  variant: "default",
-  ...,
-  sub_component_data: {
-    variant: "default",
-    ...
-  }
-  ```
-</details>
+Use `npm run scheme-data` to (re)generate the JSON file that drives the Scheme stories if the scheme css file changes.
+
+When using these color values in your CSS prefix with `--color-` followed by the name of the color shown in the swatch label.

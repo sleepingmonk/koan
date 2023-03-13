@@ -120,50 +120,6 @@ export default {
       },
       attributes: new drupalAttribute(),
     },
-    section_3: {
-      brow: false,
-      heading: 'Section With TeaserPlusList',
-      text: false,
-      sub_component_template: "TeaserPlusList",
-      sub_component_data: {
-        teaser: {
-          brow_data: {
-            part_one: 'Brow',
-            part_two: 'part two',
-            attributes: new drupalAttribute(),
-          },
-          heading: "Teaser Heading",
-          text: "<p>All the speed he took, all the turns he’d taken and the drifting shoals of waste. After the postoperative check at the rear of the arcade showed him broken lengths of damp chipboard and the dripping chassis of a gutted game console. She put his pistol down, picked up her fletcher, dialed the barrel over to single shot, and very carefully put a toxin dart through the center of a junked console.</p>"
-        },
-        list_items: [
-          {
-            link: {
-              label: "A narrow wedge of light from a half-open service hatch at the twin mirrors.",
-              href: "#"
-            },
-            footer: "May 25, 2022"
-          },
-          {
-            link: {
-              label: "It was disturbing to think of the Flatline as a paid killer in the coffin for Armitage’s call...",
-              href: "#"
-            },
-            footer: "May 25, 2022"
-          }
-        ],
-        attributes: new drupalAttribute(),
-      },
-      button_data: {
-        label: "See All Items",
-        href: "#",
-        type: 'primary',
-        size: 'normal',
-        attributes: new drupalAttribute(),
-      },
-      variant: 'warm-dark-x',
-      first_component: false,
-      attributes: new drupalAttribute(),
-    },
     section_4: {
       brow_data: false,
       heading: false,
@@ -174,7 +130,7 @@ export default {
         cardWidth: "30ch",
         attributes: new drupalAttribute(),
         items: [
-          { 
+          {
             media: '<img src="https://source.unsplash.com/random/900×700/?zen" />',
             heading: "Card:bordered-center",
             text: "<p>The girls looked like tall, exotic grazing animals, swaying gracefully and unconsciously with the movement of the train, their high heels like polished hooves against the gray metal of the arcade showed him broken lengths of damp chipboard and the dripping chassis of a painted jungle of rainbow foliage.</p>",
@@ -187,9 +143,9 @@ export default {
             // A variant type that contols the layout and style of the component.
             variant: "bordered-center",
             // drupalAttribute allows us to mock drupal attributes in storybook.
-            attributes: new drupalAttribute(),   
+            attributes: new drupalAttribute(),
           },
-          { 
+          {
             media: '<div class="frame"><img src="https://source.unsplash.com/random/900×700/?zen,monk" /></div>',
             heading: "Card:bordered-center",
             text: "<p>Now this quiet courtyard, Sunday afternoon, this girl with a random collection of European furniture, as though Deane had once intended to use the place as his home. He woke and found her stretched beside him in the tunnel’s ceiling.</p>",
@@ -202,9 +158,9 @@ export default {
             // A variant type that contols the layout and style of the component.
             variant: "bordered-center",
             // drupalAttribute allows us to mock drupal attributes in storybook.
-            attributes: new drupalAttribute(),   
+            attributes: new drupalAttribute(),
           },
-        ],    
+        ],
       },
       button_data: false,
       variant: 'white',
@@ -212,5 +168,5 @@ export default {
       attributes: new drupalAttribute(),
     },
     attributes: new drupalAttribute(),
-  }    
+  }
 }

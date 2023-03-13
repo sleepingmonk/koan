@@ -5,8 +5,8 @@
 }
 
 .card__media .frame {
-  --n: 16;
-  --d: 9;
+  --frame-h: 16;
+  --frame-v: 9;
 }
 
 .card__media .frame iframe {
@@ -23,13 +23,8 @@
 /* Bordered Center */
 .card--bordered-center .card,
 .card.card--bordered-center {
-  border: var(--s-2) solid var(--color-base-light-x);
-}
-
-.card--bordered-center > div {
-  height: 100%;
-  width: 100%;
-  border: 1px solid var(--color-base);
+  /* border: 1px solid var(--color-base); */
+  box-shadow: 2px 2px 12px rgba(100, 100, 100, .5);
 }
 
 .card--bordered-center .card__main {
@@ -62,7 +57,6 @@
   grid-template-areas: "card";
   place-items: center;
   overflow: hidden;
-  max-width: 60ch;
   background-color: var(--color-black);
   mix-blend-mode: multiply;
 }
@@ -79,8 +73,8 @@
 }
 
 .card--overlay .frame {
-  --n: 1;
-  --d: 2;
+  --frame-h: 1;
+  --frame-v: 2;
 }
 
 .card--overlay .card__media img {

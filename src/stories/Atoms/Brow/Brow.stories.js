@@ -22,10 +22,6 @@ export default {
       description: "The first part of the Brow, usually colored by `--accent-color` value.",
       table: { defaultValue: { summary: false }},
     },
-    part_two: {
-      description: "The second part of the Brow, usually colored by `--color` value. Appears after a `|`.",
-      table: { defaultValue: { summary: false }},
-    },
   },
 };
 
@@ -37,6 +33,3 @@ const Template = ({ ...args }) => {
 // Bind the Default component variant for this component.
 export const Default = Template.bind({});
 Default.args = data.default;
-
-export const DafaultWithDate = Template.bind({});
-DafaultWithDate.args = data.default_with_date;

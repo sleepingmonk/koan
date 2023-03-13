@@ -41,8 +41,16 @@
 
 .section--color-warm-dark-xx {
   --color: var(--color-white);
+  --heading-color: var(--color-black);
   --accent-color: var(--color-white);
   background: var(--color-accent-warm-dark-xx);
+}
+
+.section--color-warm-dark-x {
+  --color: var(--color-white);
+  --heading-color: var(--color-black);
+  --accent-color: var(--color-white);
+  background: var(--color-accent-warm-dark-x);
 }
 
 .section--color-warm-light-xx {
@@ -53,6 +61,8 @@
 
 /* Drop padding when two sections of the same background are touching. */
 .section--color-default + .section--color-default,
+.section--color-default + .section--color-white,
+.section--color-white + .section--color-default,
 .section--color-warm-dark-x + .section--color-warm-dark-x,
 .section--color-warm-dark-xx + .section--color-warm-dark-xx,
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {

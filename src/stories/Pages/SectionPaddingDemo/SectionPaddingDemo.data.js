@@ -17,7 +17,7 @@ export default {
         attributes: new drupalAttribute(),
       },
       button_data: false,
-      variant: 'primary-dark-xx-stripe',
+      variant: 'primary-dark-xx',
       first_component: false,
       attributes: new drupalAttribute(),
     },
@@ -89,5 +89,5 @@ export default {
       },
       attributes: new drupalAttribute(),
     }
-  }    
+  }
 }
