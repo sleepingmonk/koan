@@ -17,8 +17,6 @@ export default {
     },
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     sidebar_direction: {
       description: "The flex direction to determine which side the sidebar is on.",
       table: { defaultValue: { summary: 'row' } },

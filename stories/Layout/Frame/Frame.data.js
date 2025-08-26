@@ -1,5 +1,3 @@
-// To mock drupal attributes in storybook.
-
 export default {
   default: {
     frame_h: 16,

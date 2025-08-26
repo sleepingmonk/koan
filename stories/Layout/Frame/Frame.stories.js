@@ -16,8 +16,6 @@ export default {
     },
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     // Variant select is a pretty common arg.
     frame_h: {
       description: "Frame horizontal aspect.",

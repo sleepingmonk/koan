@@ -25,7 +25,6 @@ export default {
       description: "Add or remove items for exploring this layout.",
       table: { defaultValue: { summary: "--s1" }},
     },
-    attributes: { table: { disable: true }},
   },
 
 };

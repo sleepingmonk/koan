@@ -10,8 +10,10 @@
   'grid-demo',
 ] %}
 
-<div{{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
+<div class="{{ classes|join(' ') }}" style="{{ styles|join }}">
 {% for i in range(1, num_items) %}
-  <div class="box">{{ random(['xxx', 'xxxxx', 'xxx xxxxx', 'xxx xxxxx xxxxx', 'xxxx xxxxxx xxxxxxx xxxx']) }}</div>
+  <div class="box">
+    {{ random(['xxx', 'xxxxx', 'xxx xxxxx', 'xxx xxxxx xxxxx', 'xxxx xxxxxx xxxxxxx xxxx']) }}
+  </div>
 {% endfor %}
 </div>

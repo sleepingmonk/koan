@@ -16,9 +16,6 @@ export default {
     }
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
-    // More args here.
   },
 };
 

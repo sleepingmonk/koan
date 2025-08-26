@@ -5,7 +5,7 @@
 
 {% set cat = '' %}
 
-<div {{ attributes.addClass(classes) }}>
+<div class="{{ classes|join(' ') }}">
   {% for font in fonts %}
     {% if cat != font.category %}
       {# Close the previous group. #}

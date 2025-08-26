@@ -8,7 +8,7 @@
   'stack',
 ] %}
 
-<div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
+<div class="{{ classes|join(' ') }}" style="{{ styles|join }}">
   <p>Just a box</p>
   <div class="box" style="border: 1px solid;">
     <p>Box</p>
@@ -23,5 +23,4 @@
       <p><em>Both inner boxes wrapped in a box with border and no padding.</em></p>
     </div>
   </div>
-
 </div>

@@ -3,7 +3,6 @@ import schemeJSON from '../../assets/scheme.json';
 import readme from './Colors.mdx?raw'
 import './Colors.css';
 
-// const schemeJSON = require('../../../assets/scheme.json');
 const rows = schemeJSON.children[':root'].attributes;
 const colors = [];
 

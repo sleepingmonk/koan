@@ -16,7 +16,6 @@ export default {
     },
   },
   argTypes: {
-    attributes: {table: {disable: true}},
     variant: {
       description: "COMING SOON: See `Section` component for variant values.",
       table: {defaultValue: {summary: "default"}},

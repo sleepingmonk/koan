@@ -32,7 +32,6 @@ export default {
       table: { defaultValue: { summary: false }},
     },
     href: { table: { disable: true }},
-    attributes: { table: { disable: true }},
   },
 };
 

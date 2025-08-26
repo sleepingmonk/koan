@@ -12,7 +12,7 @@
   card_variant,
 ] %}
 
-<div {{ attributes.addClass(classes) }} {{ attributes.setAttribute('style', styles) }}>
+<div class="{{ classes|join(' ') }}" style="{{ styles|join }}">
   {% for item in items %}
     {% include "@molecules/Card/Card.twig" with item %}
   {% endfor %}

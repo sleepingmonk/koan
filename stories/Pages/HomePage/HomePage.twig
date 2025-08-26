@@ -7,7 +7,7 @@
   'homepage',
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
+<div class="{{ classes|join(' ') }}">
   {# Use composable layout classes as needed. #}
   {# Use BEM syntax if needed for styling classes. #}
   {% include "@molecules/Hero/Hero.twig" with hero %}

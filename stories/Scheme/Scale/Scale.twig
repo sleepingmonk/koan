@@ -5,7 +5,7 @@
 
 {% set cat = '' %}
 
-<div {{ attributes.addClass(classes) }}>
+<div class="{{ classes|join(' ') }}">
   <p><strong>ratio: </strong> {{ ratio }}</p>
   {% for s in scale %}
     <div class="cluster">

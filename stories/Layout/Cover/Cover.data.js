@@ -1,5 +1,3 @@
-// To mock drupal attributes in storybook.
-
 export default {
   default: {
     principal: "<div class='box'><p>This is principal</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum facere omnis voluptas neque ipsam debitis rerum numquam? Praesentium consectetur expedita delectus provident itaque quae ad est molestias, quas repellendus dicta.</p></div>",

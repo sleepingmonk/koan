@@ -30,7 +30,6 @@ export default {
       control: { type: 'select' },
       options: [false, 'black', 'white'],
     },
-    attributes: { table: { disable: true }},
   },
 };
 

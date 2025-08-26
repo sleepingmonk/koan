@@ -23,7 +23,6 @@ export default {
     },
     main: {table: { disable: true }},
     imposter: {table: { disable: true }},
-    attributes: {table: { disable: true }},
   },
 };
 

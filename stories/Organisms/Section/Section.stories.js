@@ -52,11 +52,6 @@ export default {
       description: "Populates the Button template.",
       table: {defaultValue: {summary: false}},
     },
-    attributes: {
-      table: {
-        disable: true,
-      }
-    }
   }
 };
 

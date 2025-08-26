@@ -16,8 +16,6 @@ export default {
     },
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     grid_min_width: {
       description: "The min width of the grid items.",
       table: { defaultValue: { summary: "60ch" }},

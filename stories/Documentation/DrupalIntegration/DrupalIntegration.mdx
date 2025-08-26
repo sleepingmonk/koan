@@ -67,14 +67,12 @@ Your `my_theme/templates/paragraphs/paragraph--hero.html.twig` file:
   bg_tint: 'accent-warm-dark-xx',
   background_image_url: '/image.jpg',
   card_data: {
-    attributes: create_attribute(),
     variant: "default",
     first_component: true,
     media: false,
     heading: paragraph.field_heading.value,
     text: content.field_lead,
     button_data: {
-      attributes: create_attribute(),
       variant: "primary",
       label: paragraph.field_link.title,
       href: paragraph.field_link.uri,

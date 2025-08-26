@@ -1,22 +1,13 @@
-{# Atomic templates should be as "dumb" as possible. #}
-
-{# A card could provide the heading (h1) for a Hero in the first position. #}
-{# Usually the card heading witll be (h3). #}
 {% set h = first_component ? 'h1' : 'h2' %}
 {% set tag = variant == 'icon' ? 'a' : 'div' %}
-{% set tag_href = tag == 'a' ? attributes.setAttribute('href', button_data.href) : '' %}
-
+{% set tag_href = tag == 'a' ? 'href="' ~ {{button_data.href}} ~ '"' : '' %}
 {% set type = variant ? 'card--' ~ variant : 'card--default' %}
-
-{# Create class array. #}
-{# Include composable layout classes as needed. #}
-{# Include variant classes form above. #}
 {% set classes = [
   'card',
   type,
 ] %}
 
-<{{tag}} {{ attributes.addClass(classes) }} {{ tag_href }}>
+<{{tag}} class="{{ classes|join(' ') }}" {{ tag_href }}>
   <div class="switcher">
     {% if icon_data and variant == 'icon' %}
       {% include "@atoms/Icon/Icon.twig" with icon_data %}

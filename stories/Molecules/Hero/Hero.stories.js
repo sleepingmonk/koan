@@ -15,7 +15,6 @@ export default {
     },
   },
   argTypes: {
-    attributes: {table: {disable: true}},
     variant: {
       description: "Hero variant.",
       table: {defaultValue: {summary: 'banner'}},

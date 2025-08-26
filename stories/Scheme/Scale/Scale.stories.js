@@ -36,7 +36,6 @@ export default {
     }
   },
   argTypes: {
-    attributes: {table: {disable: true}},
     scale: {table: {disable: true}},
     ratio: {table: {disable: true}},
   },

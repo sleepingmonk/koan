@@ -30,7 +30,6 @@ export default {
     }
   },
   argTypes: {
-    attributes: {table: {disable: true}},
     fonts: {table: {disable: true}},
     font_weight: {
       control: { type: 'select' },
