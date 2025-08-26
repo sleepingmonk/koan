@@ -1,30 +1,35 @@
-import { Doc } from './docs.mdx';
-import Twig from 'twig';
-import twigDrupal from 'twig-drupal-filters';
-// Add the filters to Twig instance.
-twigDrupal(Twig);
+import { DocsContainer } from '@storybook/addon-docs/blocks';
+import DocsTemplate from './docs.jsx';
+import '../stories/css/elements.css';
+import '../stories/css/layout-primitives.css';
+import '../stories/css/scheme-default.css';
+import './docs.css';
 
-export const parameters = {
-  layout: 'fullscreen',
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      // color: /(background|color)$/i,
-      date: /Date$/,
+export default {
+  tags: ['autodocs'], // Enables auto-generated documentation for all stories
+  parameters: {
+    layout: 'fullscreen',
+    actions: { argTypesRegex: "^on[A-Z].*" },
+    controls: {
+      matchers: {
+        date: /Date$/,
+      },
     },
-  },
-  docs: {
-    extractComponentDescription: (_component, { notes }) => {
-      if (notes) {
-        return typeof notes === 'string' ? notes : notes.markdown || notes.text;
-      }
-      return null;
+    options: {
+      storySort: {
+        order: [
+          'Page Demos',
+          'Documentation', ['Intro'],
+          'Scheme', ['Colors', 'Fonts', 'Sizes'],
+          'Layout Demos',
+          'Components',
+        ],
+      },
     },
-    page: Doc,
-  },
-  options: {
-    storySort: {
-      order: ['Documentation', ['Intro'], 'Layout', 'Scheme', ['Colors', 'Fonts', 'Sizes'], 'Atoms', 'Molecules', 'Organisms', 'Pages'],
-    },
-  },
-}
+    docs: {
+      container: DocsContainer,
+      page: DocsTemplate,
+      toc: true,
+    }
+  }
+};

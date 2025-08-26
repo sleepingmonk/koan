@@ -1,37 +1,38 @@
-const path = require('path');
+import { mergeConfig } from 'vite';
+import twigDrupal from 'vite-plugin-twig-drupal';
+import path from 'path';
 
-module.exports = {
-  stories: [
-    "../src/css/scheme-default.css",
-    "../src/css/layout-primitives.css",
-    "../src/css/elements.css",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
+/** @type { import('@storybook/html-vite').StorybookConfig } */
+const config = {
+  "stories": [
+    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-a11y"
+  "addons": [
+    "@storybook/addon-docs",
   ],
-  framework: "@storybook/html",
-  staticDirs: ['../src/assets'],
-
-  // Config Webpack
-  webpackFinal: async (config, { configType }) => {
-
-    // Alias
-    config.resolve.alias = {
-      '@atoms': path.resolve(__dirname, '../', 'src/stories/Atoms'),
-      '@molecules': path.resolve(__dirname, '../', 'src/stories/Molecules'),
-      '@organisms': path.resolve(__dirname, '../', 'src/stories/Organisms'),
-    }
-    // Loaders
-    config.module.rules.push(
-      {
-        test: /\.twig$/,
-        use: 'twigjs-loader',
-      }
-    );
-
-    return config;
+  "framework": {
+    "name": "@storybook/html-vite",
+    "options": {}
   },
-}
+  viteFinal: async (config) => {
+    return mergeConfig(config, {
+      resolve: {
+        alias: {
+          "@atoms": path.resolve(__dirname, "../stories/Atoms"),
+          "@molecules": path.resolve(__dirname, "../stories/Molecules"),
+          "@organisms": path.resolve(__dirname, "../stories/Organisms"),
+        },
+      },
+      plugins: [
+        twigDrupal({
+          namespaces: {
+            atoms: path.resolve(__dirname, "../stories/Atoms"),
+            molecules: path.resolve(__dirname, "../stories/Molecules"),
+            organisms: path.resolve(__dirname, "../stories/Organisms"),
+          },
+        }),
+      ],
+    });
+  },
+};
+export default config;

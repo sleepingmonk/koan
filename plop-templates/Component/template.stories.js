@@ -1,4 +1,4 @@
-import readme from './readme.md';
+
 import data from './{{pascalCase name}}.data';
 import {{pascalCase name}} from './{{pascalCase name}}.twig';
 import './{{pascalCase name}}.css';
@@ -8,7 +8,7 @@ export default {
   title: '{{pascalCase type}}/{{pascalCase name}}',
   component: {{pascalCase name}},
   parameters: {
-    notes: readme,
+
   },
   argTypes: {
     // Don't show the mock drupal attributes.

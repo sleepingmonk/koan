@@ -1,0 +1,75 @@
+
+export default {
+  default: {
+    variant: 'default',
+    first_component: false,
+    brow_data: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "",
+
+    },
+    heading: 'Heading Example',
+    text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
+    button_data: {
+      label: "Button",
+      href: "#",
+      variant: "primary",
+    },
+
+  },
+  primary_dark_xx: {
+    variant: 'primary-dark-xx',
+    first_component: false,
+    brow_data: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "",
+
+    },
+    heading: 'Heading Example',
+    text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
+    button_data: {
+      label: "Button",
+      href: "#",
+      variant: "primary",
+    },
+
+  },
+  warm_light_xx: {
+    variant: 'warm-light-xx',
+    first_component: false,
+    brow_data: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "",
+
+    },
+    heading: 'Heading Example',
+    text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
+    button_data: {
+      label: "Button",
+      href: "#",
+      variant: "primary",
+    },
+
+  },
+  white: {
+    variant: 'white',
+    first_component: false,
+    brow_data: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "",
+
+    },
+    heading: 'Heading Example',
+    text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
+    button_data: {
+      label: "Button",
+      href: "#",
+      variant: "primary",
+    },
+
+  }
+}
