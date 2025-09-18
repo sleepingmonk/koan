@@ -14,7 +14,7 @@ const config = {
     "name": "@storybook/html-vite",
     "options": {}
   },
-  viteFinal: async (config) => {
+  viteFinal: async (config, { configType }) => {
     // Check if building for production on GitHub Pages
     if (configType === 'PRODUCTION' && process.env.STORYBOOK_GITHUB_PAGES_BUILD) {
       config.base = '/koan/';
