@@ -1,8 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Zen+Loop&display=swap');
+/* Import Fonts */
+@font-face {
+  font-family: 'Zen Kaku Gothic Antique';
+  font-style: 'normal';
+  font-weight: 400;
+  font-display: swap;
+  src: url(/Fonts/Zen_Kaku_Gothic_Antique/ZenKakuGothicAntique-Regular.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Zen Maru Gothic';
+  font-style: 'normal';
+  font-weight: 400;
+  font-display: swap;
+  src: url(/Fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf) format('ttf');
+}
 
 /* Variables. */
 :root {
-  /* Scale */
+
   --ratio: 1.30;
   --s-6: calc(var(--s-5) / var(--ratio));
   --s-5: calc(var(--s-4) / var(--ratio));
@@ -19,56 +34,48 @@
   --s6: calc(var(--s5) * var(--ratio));
   --s7: calc(var(--s6) * var(--ratio));
 
-  /* Content spacing. */
   --measure: 60ch;
   --max-width: 126ch;
   --min-width: 40ch;
 
-  /* Fonts */
-  --font-primary: 'Zen Loop', sans-serif;
-  --font-secondary: 'Indie Flower', sans-serif;
+  --font-primary: 'Zen Kaku Gothic Antique', sans-serif;
+  --font-secondary: 'Zen Maru Gothic', sans-serif;
 
-  /* Colors */
-  --color-white: #ffffff;
-  --color-black: #000000;
+  --color-light: #F9FAF9;
+  --color-dark: #1A1A1A;
 
-  --color-base-dark-xxx: #3D3D3D;
-  --color-base-dark-xx: #525252;
-  --color-base-dark-x: #666666;
-  --color-base: #7A7A7A;
-  --color-base-light-x: #8F8F8F;
-  --color-base-light-xx: #A3A3A3;
-  --color-base-light-xxx: #B8B8B8;
+  --color-base-dark-xx: #404040;
+  --color-base-dark-x:  #707070;
+  --color-base: #B0B0B0;
+  --color-base-light-x:  #E0E0E0;
+  --color-base-light-xx:  #F2F2F2;
 
-  --color-accent-warm-dark-xx: #FFBC1F;
-  --color-accent-warm-dark-x: #FFC847;
-  --color-accent-warm: #FFD470;
-  --color-accent-warm-light-x: #FFE099;
-  --color-accent-warm-light-xx: #FFEDC2;
+  --color-primary-dark-xx: #2D3A80;
+  --color-primary-dark-x: #4455AA;
+  --color-primary: #6677CC;
+  --color-primary-light-x: #C5CEEC;
+  --color-primary-light-xx: #E9ECF8;
 
-  --color-primary-dark-xx: #5BC9D7;
-  --color-primary-dark-x: #7CD4DF;
-  --color-primary: #9CDEE7;
-  --color-primary-light-x: #BDE9EF;
-  --color-primary-light-xx: #DEF4F7;
-
-  --color-secondary-dark-xx: #992F1E;
-  --color-secondary-dark-x: #BB3925;
-  --color-secondary: #D74833;
-  --color-secondary-light-x: #DD6755;
-  --color-secondary-light-xx: #E48577;
+  --color-accent-dark-xx: #805819;
+  --color-accent-dark-x: #B97F25;
+  --color-accent: #E6A93C;
+  --color-accent-light-x: #FFD999;
+  --color-accent-light-xx: #FFF3E0;
 
   /* Contextual variable: can be overridden at the component level to affect accent elements within. */
-  --bg: transparent;
+
+  --bg: var(--color-light);
   --heading-color: var(--color-primary-dark-xx);
   --accent-color: var(--color-primary-dark-x);
-  --color: var(--color-black);
-  --button-fg: var(--accent-color);
+  --color: var(--color-dark);
+  --button-fg: var(--bg);
+  --button-bg: var(--accent-color);
   --border-thin: 1px;
   --border-normal: 2px;
 }
 
 /* The only media query used simply bumps the base size of our modular scale for larger screens. */
+
 @media screen and (min-width: 720px) {
   :root {
     --s0: 1rem;

@@ -1,166 +1,70 @@
+import { background } from "storybook/internal/theming";
 
 export default {
   default: {
-    hero: {
-      variant: 'content-bg',
-      content_justify: 'left',
-      bg_tint: false,
-      background_image_url: '/image.jpg',
-      card_data: {
-        variant: "default",
-        first_component: true,
-        media: false,
-        heading: "Card Within Hero",
-        subheading: false,
-        text: "<p>They were dropping, losing altitude in a canyon of rainbow foliage, a lurid communal mural that completely covered the hull of the previous century. None of that prepared him for the arena, the crowd, the tense hush, the towering puppets of light from a service hatch framed a heap of discarded fiber optics and the chassis of a skyscraper canyon. No light but the muted purring of the car’s floor.</p>",
-        button_data: false,
-
-      },
-    },
     section_1: {
-      variant: 'primary-dark-xx',
-      brow_data: {
-        part_one: "Section With Card",
-        part_two: false,
-        variant: 'default',
-
-      },
-      heading: false,
-      text: false,
-      first_component: false,
+      first_component: true,
+      scheme: 'dark',
+      section_classes: ['hero'],
+      align_items: "center",
+      background_image_url: "/image.jpg",
+      bg_tint: true,
+      heading: "Koan",
+      text: "<p>The Zen of UI</p>",
+      content_data: `
+        <div class="center stack" style="text-align: center;">
+          <p>An ultra-light design system built on clarity and flow.<br />
+          <strong>Algorithmic Layout Primitives, Atomic Design Principles, and a powerful Scheme System</strong>, clear away the noise so you can build effortless interfaces that just work.</p>
+          <div class="switcher"><a class="button button--small" href="https://www.drupal.org/project/koan" target="_blank" rel="noopener">Get for Drupal</a> <a class="button button--small" href="https://npmjs.com/package/@bionic/react-koan" target="_blank" rel="noopener">Get for React</a></div>
+        </div>
+      `,
       button_data: false,
-      sub_component_template: "Card",
-      sub_component_data: {
-        variant: "media-right",
-        media: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Y0p663Ot8mo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
-        media_caption: '<p>Case felt the edge of the Flatline as a construct, a hardwired ROM cassette replicating a dead man’s skills, obsessions, kneejerk responses.</p>',
-        heading: "Card:media-right Within Section",
-        text: "<p>He stared at the clinic, Molly took him to the Tank War, mouth touched with hot gold as a gliding cursor struck sparks from the wall between the bookcases, its distorted face sagging to the bare concrete floor. Now this quiet courtyard, Sunday afternoon, this girl with a luminous digital display wired to a kind of central stage, a raised circle ringed with a random collection of European furniture, as though Deane had once intended to use the place as his home.</p>",
-        button: false,
-
-      },
-
     },
     section_2: {
-      variant: "default",
-      heading: 'Section With Cards',
-      sub_component_template: "Cards",
-      sub_component_data: {
-
-        variant: "",
-        cardWidth: "45ch",
-        items: [
-          {
-            variant: "icon",
-            icon_data: {
-              icon: "flame",
-              color: false,
-
-            },
-            heading: "Card:icon",
-            text: false,
-            button_data: {
-              label: "Button",
-              href: "#",
-              variant: "primary",
-            },
-
-          },
-          {
-            icon_data: {
-              icon: "flame",
-              color: false,
-
-            },
-            heading: "Card:icon",
-            text: false,
-            button_data: {
-              label: "Button",
-              href: "#",
-              variant: "primary",
-            },
-            variant: "icon",
-
-          },
-          {
-            icon_data: {
-              icon: "flame",
-              color: false,
-
-            },
-            heading: "Card:icon",
-            text: false,
-            button_data: {
-              label: "Button",
-              href: "#",
-              variant: "primary",
-            },
-            variant: "icon",
-
-          },
-          {
-            icon_data: {
-              icon: "flame",
-              color: false,
-
-            },
-            heading: "Card:icon",
-            text: false,
-            button_data: {
-              label: "Button",
-              href: "#",
-              variant: "primary",
-            },
-            variant: "icon",
-
-          },
-        ],
-      },
-
+      scheme: "base-light-x",
+      align_items: "center",
+      heading: 'When You Care About Form and Flow',
+      content_layout: "center stack",
+      content_data: `
+        <p>This project was born out of frustration with bloated frameworks and cryptic “class soup” that makes code harder, not easier. Instead of fighting your tools, you should be free to focus on your content, your layouts, and your users.</p>
+        <h3>Why It's Different</h3>
+        <ul>
+          <li><strong>Algorithmic Layout</strong><br />
+          At its core is a foundation of layout primitives—an ultra-lightweight CSS layer that makes content king. With only a dozen classes, you can build flexible, fluid layouts that never break, no matter the screen size.</li>
+          <li><strong>Atomic Design Principles</strong><br />
+          Primitives compose into Atoms, Molecules, and Organisms—the essential building blocks of any page. This structured approach makes it simple to scale from small UI pieces to complex systems without losing consistency.</li>
+          <li><strong>Powerful Scheme System</strong><br />
+          A small set of CSS custom properties gives you deep control over your project's look and feel. Set a variant at the Organism level, and it cascades seamlessly through Molecules and Atoms. Consistency isn't an afterthought—it's baked into the architecture.</li>
+          <li><strong>Light Weight, Heavy Impact</strong><br />
+          No massive bundles, no endless JavaScript. Just what you need out of the box to build a solid frontend—plus the flexibility to compose advanced or highly specific components of your own.</li>
+          <li><strong>No Class Soup</strong><br />
+          Forget cryptic markup that looks like inline styles in disguise. Your code stays readable, logical, and maintainable.</li>
+        </ul>
+        <h3>The Result</h3>
+        <p>A system that respects your creativity, your users, and your time. It gets out of the way, removes friction, and lets you build layouts and components that feel natural, consistent, and fast.</p>
+        <h3>Get Started</h3>
+        <p>Whether you're building a new project from scratch or looking to streamline an existing one, Koan provides a solid foundation that scales with your needs. Dive into the <a href="/?path=/docs/documentation-intro--docs">documentation</a>, explore the components, and see how Koan can transform your workflow.</p>
+        <div class="switcher"><a class="button button--small" href="https://www.drupal.org/project/koan" target="_blank" rel="noopener">Get Koan for Drupal</a> <a class="button button--small" href="https://https://npmjs.com/package/@bionic/react-koan" target="_blank" rel="noopener">Get Koan for React</a></div>
+      `,
     },
-    section_4: {
-      brow_data: false,
-      heading: false,
-      text: false,
-      sub_component_template: "Cards",
-      sub_component_data: {
-        variant: "",
-        cardWidth: "30ch",
-
-        items: [
-          {
-            media: '<img src="/image.jpg" />',
-            heading: "Card:bordered-center",
-            text: "<p>The girls looked like tall, exotic grazing animals, swaying gracefully and unconsciously with the movement of the train, their high heels like polished hooves against the gray metal of the arcade showed him broken lengths of damp chipboard and the dripping chassis of a painted jungle of rainbow foliage.</p>",
-            button_data: {
-              label: "Button Primary Small",
-              href: "#",
-              variant: "primary",
-              size: "small",
-            },
-            // A variant type that contols the layout and style of the component.
-            variant: "bordered-center",
-          },
-          {
-            media: '<div class="frame"><img src="/image.jpg" /></div>',
-            heading: "Card:bordered-center",
-            text: "<p>Now this quiet courtyard, Sunday afternoon, this girl with a random collection of European furniture, as though Deane had once intended to use the place as his home. He woke and found her stretched beside him in the tunnel’s ceiling.</p>",
-            button_data: {
-              label: "Button Primary Small",
-              href: "#",
-              variant: "primary",
-              size: "small",
-            },
-            // A variant type that contols the layout and style of the component.
-            variant: "bordered-center",
-          },
-        ],
-      },
-      button_data: false,
-      variant: 'white',
+    section_3: {
       first_component: false,
-
+      scheme: 'base',
+      section_classes: ['footer'],
+      align_items: "start",
+      text: `
+        <div class="branding">
+          <svg viewBox="0 0 100 50" class="icon">
+            <use xlink:href="/icons.svg#BionicStudioLogo-wm"></use>
+          </svg>
+        </div>`,
+      content_data: `
+        <div class="center stack">
+          <p>Hand crafted and maintained with ♥ by Calvin at <a href="https://bionic.studio" target="_blank">Bionic Studio</a></p>
+          <p>Bionic Studio is a full service web consulting, development and marketing agency. We help teams, projects and businesses be successful. <a href="https://bionic.studio" target="_blank">https://bionic.studio</a></p>
+        </div>
+      `,
+      button_data: false,
     },
-
   }
 }

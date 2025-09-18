@@ -1,6 +1,8 @@
 import data from './SectionPaddingDemo.data';
 import SectionPaddingDemo from './SectionPaddingDemo.twig';
 import './SectionPaddingDemo.css';
+import '../../Molecules/Card/Card.css';
+import '../../Organisms/Section/Section.css';
 
 export default {
   title: 'Page Demos/SectionPaddingDemo',

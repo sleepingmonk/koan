@@ -1,6 +1,7 @@
 import data from './HomePage.data';
 import HomePage from './HomePage.twig';
 import './HomePage.css';
+import '../../Atoms/Button/Button.css';
 
 export default {
   title: 'Page Demos/HomePage',

@@ -55,7 +55,9 @@ export default {
   },
   overlay: {
     variant: "overlay",
-    media: '<img src="/image.jpg" />',
+    media: {
+      url: "/image.jpg",
+    },
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
     button_data: {

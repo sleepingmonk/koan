@@ -4,13 +4,39 @@
 {# Include composable layout classes as needed. #}
 {# Include variant classes form above. #}
 {% set classes = [
-  'homepage',
+  'section-padding-demo',
 ] %}
+
+{% set section_one_card %}
+  {% include "@molecules/Card/Card.twig" with {
+    media: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Y0p663Ot8mo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+    media_caption: '<p>Media caption.</p>',
+    heading: "The Problem",
+    text: "<p>When stacking Sections on a page we need to manage the spacing between content within adjacent Sections.</p><p>When Section backrounds are <b><i>different</i></b>, the spacing of the content needs to be relative to the border between the sections.</p><p>When Section backgrounds are the <b><i>same</i></b>, the spacing of the content needs to be relative to the content within each Section, otherwise there's too much negative space between content.</p><p>You can use the Measure and Outline tools in the toolbar to verify.</p>",
+    button_data: false,
+    variant: "media-right",
+  } %}
+{% endset %}
+
+{# Render component #}
 
 <div class="{{ classes|join(' ') }}">
   {# Use composable layout classes as needed. #}
   {# Use BEM syntax if needed for styling classes. #}
-  {% include "@organisms/Section/Section.twig" with section_1 %}
+  {% include "@organisms/Section/Section.twig" with {
+    first_component: section_1.first_component,
+    scheme: section_1.scheme,
+    align_items: section_1.align_items,
+    background_image_url: section_1.background_image_url,
+    bg_tint: section_1.bg_tint,
+    brow_data: section_1.brow_data,
+    heading: section_1.heading,
+    text: section_1.text,
+    button_data: section_1.button_data,
+    content_layout: section_1.content_layout,
+    content_styles: section_1.content_styles,
+    content_data: section_one_card,
+  } %}
   {% include "@organisms/Section/Section.twig" with section_2 %}
   {% include "@organisms/Section/Section.twig" with section_3 %}
 </div>

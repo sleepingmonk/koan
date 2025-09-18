@@ -18,19 +18,17 @@
 
 /* Card modifier class can be used on the .cards wrapper or on the card. */
 /* So we use both types of selector orders for each variant. */
-/* @todo: determine if we can omit the .card level and always expect the card modifier class on the .cards component. */
 
 /* Bordered Center */
 .card--bordered-center .card,
 .card.card--bordered-center {
-  /* border: 1px solid var(--color-base); */
-  box-shadow: 2px 2px 12px rgba(100, 100, 100, .5);
+  box-shadow: 2px 2px 12px rgba(100, 100, 100, .7);
 }
 
 .card--bordered-center .card__main {
-  text-align: center;
   /* Because this is also wrapped in '.center' we can cause intrinsic center. */
   --align-items: center;
+  text-align: center;
 }
 
 /* Media Left */
@@ -47,18 +45,19 @@
 }
 
 /* Overlay */
+.card--overlay {
+  --bg: var(--color-dark);
+  --color: var(--color-light);
+  background-color: var(--bg);
+}
 .card--overlay .card > *,
 .card.card--overlay > * {
-  --color: var(--color-white);
+  --bg: var(--color-dark);
+  --color: var(--color-light);
   --heading-color: var(--color);
-  --button-fg: var(--color);
-  --button-border: var(--color);
   display: grid;
   grid-template-areas: "card";
-  place-items: center;
   overflow: hidden;
-  background-color: var(--color-black);
-  mix-blend-mode: multiply;
 }
 
 .card--overlay .card > * > *,
@@ -66,15 +65,12 @@
   grid-area: card;
 }
 
-.card--overlay .card__media {
-  opacity: .5;
-  overflow: hidden;
-  max-height: 50ch;
-}
-
-.card--overlay .frame {
-  --frame-h: 1;
-  --frame-v: 2;
+.card--overlay .card__media > * {
+  opacity: 1;
+  mix-blend-mode: overlay;
+  min-inline-size: 100%;
+  min-block-size: 100%;
+  background: var(--background-image) no-repeat center/cover;
 }
 
 .card--overlay .card__media img {
@@ -92,10 +88,9 @@
 /* Icon */
 .card--icon .card,
 .card.card--icon {
-  --color: var(--color-white);
-  --heading-color: var(--color-white);
+  --color: var(--color-light);
+  --heading-color: var(--color-light);
   --align-items: center;
-
   gap: var(--s0);
   color: var(--color);
   display: flex;
@@ -103,14 +98,13 @@
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  background: gray;
   padding: var(--s2) var(--s5);
   font-size: var(--s3);
   line-height: var(--s4);
   text-align: center;
   text-decoration: none;
-
   background: var(--color-primary-dark-xx);
+  box-shadow: 2px 2px 12px var(--color-base);
 }
 
 .card--icon .card .box,

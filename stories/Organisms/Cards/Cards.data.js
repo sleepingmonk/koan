@@ -117,10 +117,163 @@ export default {
 
   },
   icon: {
-    variant: "",
-    card_width: "45ch",
+    variant: "multicolor",
+    card_width: "35ch",
     card_variant: "",
     items: [
+      {
+        variant: "icon",
+        media: false,
+        icon_data: {
+          icon: "flame",
+          color: false,
+
+        },
+        heading: "Heading For A Card",
+        text: false,
+        button_data: {
+          label: "Button",
+          href: "#",
+          variant: "primary",
+        },
+
+      },
+      {
+        variant: "icon",
+        media: false,
+        icon_data: {
+          icon: "flame",
+          color: false,
+
+        },
+        heading: "Heading For A Card",
+        text: false,
+        button_data: {
+          label: "Button",
+          href: "#",
+          variant: "primary",
+        },
+
+      },
+      {
+        variant: "icon",
+        media: false,
+        icon_data: {
+          icon: "flame",
+          color: false,
+
+        },
+        heading: "Heading For A Card",
+        text: false,
+        button_data: {
+          label: "Button",
+          href: "#",
+          variant: "primary",
+        },
+
+      },
+      {
+        variant: "icon",
+        media: false,
+        icon_data: {
+          icon: "flame",
+          color: false,
+
+        },
+        heading: "Heading For A Card",
+        text: false,
+        button_data: {
+          label: "Button",
+          href: "#",
+          variant: "primary",
+        },
+
+      },
+      {
+        variant: "icon",
+        media: false,
+        icon_data: {
+          icon: "flame",
+          color: false,
+
+        },
+        heading: "Heading For A Card",
+        text: false,
+        button_data: {
+          label: "Button",
+          href: "#",
+          variant: "primary",
+        },
+
+      },
+      {
+        variant: "icon",
+        media: false,
+        icon_data: {
+          icon: "flame",
+          color: false,
+
+        },
+        heading: "Heading For A Card",
+        text: false,
+        button_data: {
+          label: "Button",
+          href: "#",
+          variant: "primary",
+        },
+
+      },
+      {
+        variant: "icon",
+        media: false,
+        icon_data: {
+          icon: "flame",
+          color: false,
+
+        },
+        heading: "Heading For A Card",
+        text: false,
+        button_data: {
+          label: "Button",
+          href: "#",
+          variant: "primary",
+        },
+
+      },
+      {
+        variant: "icon",
+        media: false,
+        icon_data: {
+          icon: "flame",
+          color: false,
+
+        },
+        heading: "Heading For A Card",
+        text: false,
+        button_data: {
+          label: "Button",
+          href: "#",
+          variant: "primary",
+        },
+
+      },
+      {
+        variant: "icon",
+        media: false,
+        icon_data: {
+          icon: "flame",
+          color: false,
+
+        },
+        heading: "Heading For A Card",
+        text: false,
+        button_data: {
+          label: "Button",
+          href: "#",
+          variant: "primary",
+        },
+
+      },
       {
         variant: "icon",
         media: false,

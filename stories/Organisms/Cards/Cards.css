@@ -4,8 +4,8 @@
 
 /* Icon Cards */
 .cards .card.card--icon {
-  --color: var(--color-white);
-  --heading-color: var(--color-white);
+  --color: var(--color-light);
+  --heading-color: var(--color-light);
 
   color: var(--color);
   display: flex;
@@ -20,26 +20,25 @@
 }
 
 /* Icon Card Variants */
-.cards .card--icon:nth-of-type(6n + 1) {
-  background: var(--color-primary-dark-xx);
+
+.cards--multicolor .card--icon:nth-of-type(5n + 1) {
+  --color: var(--color-primary-dark-xx);
+  --heading-color: var(--color-primary-dark-xx);
+  background: var(--color-light);
 }
 
-.cards .card--icon:nth-of-type(6n + 2) {
-  background: var(--color-primary-dark-x);
+.cards--multicolor .card--icon:nth-of-type(5n + 2) {
+  background: var(--color-dark);
 }
 
-.cards .card--icon:nth-of-type(6n + 3) {
-  background: var(--color-secondary);
+.cards--multicolor .card--icon:nth-of-type(5n + 3) {
+  background: var(--color-base);
 }
 
-.cards .card--icon:nth-of-type(6n + 4) {
-  background: var(--color-accent-warm-dark-x);
+.cards--multicolor .card--icon:nth-of-type(5n + 4) {
+  background: var(--color-primary);
 }
 
-.cards .card--icon:nth-of-type(6n + 5) {
-  background: var(--color-secondary-dark-xx);
-}
-
-.cards .card--icon:nth-of-type(6n + 6) {
-  background: var(--color-primary-light-xx);
+.cards--multicolor .card--icon:nth-of-type(5n + 5) {
+  background: var(--color-accent);
 }

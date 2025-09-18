@@ -2,7 +2,7 @@
   color: var(--color);
 }
 
-.icon-wrapper .icon {
-  width: var(--s6);
+.icon-wrapper > .icon {
+  width: var(--s5);
   height: auto;
 }

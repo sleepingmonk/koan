@@ -4,8 +4,14 @@ import './Icon.css';
 import readme from './Icon.mdx?raw';
 
 import iconsJSON from '../../assets/icons.json';
+import schemeJSON from '../../assets/scheme.json';
+const schemeColors = Object.keys(schemeJSON.children[':root'].attributes).map(key => {
+  if (key.startsWith('--color-')) {
+    return key.replace('--color-', '');
+  }
+  return false;
+});
 
-console.log('iconsJSON', iconsJSON);
 export default {
   title: 'Components/Atoms/Icon',
   component: Icon,
@@ -28,7 +34,7 @@ export default {
       description: "Can be any color defined in the scheme CSS file, i.e. `assets/css/scheme-default.css` or any scheme file that overrides it. If the defined color is `--color-primary-dark-x` then the color name is `primary-dark-x`.  `false` inherits the current `--color` value.",
       table: { defaultValue: { summary: false }},
       control: { type: 'select' },
-      options: [false, 'black', 'white'],
+      options: schemeColors,
     },
   },
 };

@@ -1,8 +1,9 @@
 
 import data from './Card.data';
 import Card from './Card.twig';
-import './Card.css';
 import readme from './Card.mdx?raw';
+import './Card.css';
+import '../../Atoms/Button/Button.css';
 
 export default {
   title: 'Components/Molecules/Card',
@@ -20,7 +21,7 @@ export default {
       description: "The Card variant. Often set on the `Cards` component.",
       table: { defaultValue: { summary: 'default' }},
       control: { type: 'select' },
-      options: ['default', 'bordered-center', 'media-left', 'media-right', 'overlay'],
+      options: ['default', 'bordered-center', 'media-left', 'media-right', 'overlay', 'icon'],
     },
     media: {
       description: "Image, Video",

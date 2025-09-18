@@ -1,83 +1,81 @@
-{# Set brow and heading tags based on if they're first component or not. #}
-{# Subordinate heading to brow if present. #}
-{% if first_component %}
-  {% set h = brow ? 'h2' : 'h1' %}
-{% else %}
-  {% set h = brow ? 'h3' : 'h2' %}
-{% endif %}
-
-{% set variant_justify = content_justify
-  ? 'section--justify-' ~ content_justify
-  : 'section--justify-center' %}
-
-{% set variant_align = content_align
-  ? 'section--align-' ~ content_align
-  : 'section--align-center' %}
-
-{% set variant_class = variant ? 'section--color-' ~ variant : 'section--color-default' %}
-
-{# Create class array #}
 {% set classes = [
   'section',
-  variant_justify,
-  variant_align,
-  variant_class,
 ] %}
 
-{#
- # Due to a lack of support in twigjs-loader, we need to define possible
- # sub components. The maintainer will not support variables for template
- # parameter in include statements.
- #
- # i.e. {% include this_var_breaks_things with this_var_is_fine %}
- #
- # This would NOT break in Drupal, but in order for this to work in Storybook
- # we need to specify the include with if statements. It's better to have
- # this complexity in pattern library, rather than when integrating with
- # Drupal.
- #
- # https://github.com/twigjs/twig.js/issues/806
- #
- # @todo: Try to add support and PR or fork the twigjs-loader package.
- #}
-{% set sub_component %}
-  {% if sub_component_template == 'Card' %}
-    {% include "@molecules/Card/Card.twig" with sub_component_data %}
-  {% endif %}
-  {% if sub_component_template == 'Cards' %}
-    {% include "@organisms/Cards/Cards.twig" with sub_component_data %}
-  {% endif %}
-{% endset %}
-
-{% if sub_component|trim == "" %}
-  {% set sub_component %}
-    <div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>
-  {% endset %}
+{% if background_image_url is not empty %}
+  {% set classes = classes|merge(['section--with-bg-image']) %}
 {% endif %}
 
+{% if scheme %}
+  {% set classes = classes|merge(['section--color-' ~ scheme]) %}
+{% else %}
+  {% set classes = classes|merge(['section--color-default']) %}
+{% endif %}
+
+{% if section_classes is iterable %}
+  {% set classes = classes|merge(section_classes) %}
+{% endif %}
+
+{# Set heading tag based on if they're first component or not. #}
+{% set h = first_component ? 'h1' : 'h2' %}
+
+{% set content_layout = content_layout is not empty ? content_layout : '' %}
+
+{% set styles = [] %}
+{% set bg_color = 'none' %}
+
+{% if align_items %}
+  {% set classes = classes|merge([
+    'section--align-' ~ align_items,
+  ]) %}
+{% endif %}
+
+{% set inner_box_class = disable_inner_box == true ? '' : 'box' %}
+
 {# Section Template #}
-<div class="{{ classes|join(' ') }}">
-  <div class="section__content container">
-    <div class="section__header center stack" style="--space: var(--s0):">
-      {% if brow_data %}
-        {% include "@atoms/Brow/Brow.twig" with brow_data %}
-      {% endif %}
-      {% if heading %}
-        <{{h}}>{{ heading }}</{{h}}>
-      {% endif %}
-      {% if text %}
-        {{ text }}
-      {% endif %}
-    </div>
-    <div class="section__main">
-      {% if sub_component|trim %}
-        {{ sub_component }}
-      {% endif %}
-    </div>
-    {% if button_data %}
-      <div class="section__button center">
-        {% include "@atoms/Button/Button.twig" with button_data %}
-      </div>
+<div class="{{ classes|join(' ')}}" style="{{ styles|join }}">
+  {% if background_image_url is not empty %}
+    <div class="section__image" style="--background-image: url('{{ background_image_url }}');"></div>
+    {% if bg_tint is not empty %}
+      <div class="section__tint"></div>
     {% endif %}
+  {% endif %}
+  <div class="section__content {{ inner_box_class }}">
+    <div class="container stack">
+      {% if brow_data or heading or text %}
+        <div class="section__header">
+          {% if brow_data is not empty %}
+            {% include "@atoms/Brow/Brow.twig" with brow_data %}
+          {% endif %}
+          {% if heading is not empty %}
+            <{{h}}>{{ heading }}</{{h}}>
+          {% endif %}
+          {% if text is not empty %}
+            {{ text }}
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if content_data is not empty %}
+        <div class="section__main {{ content_layout }}" style="{{ content_styles|join }}">
+          {% if content_data is iterable %}
+            {% for item in content_data %}
+              {{ item }}
+            {% endfor %}
+          {% elseif content_data|trim %}
+            {{ content_data }}
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if button_data is not empty %}
+        <div class="section__button container">
+          {% include "@atoms/Button/Button.twig" with {
+            variant: button_data.variant,
+            size: button_data.size,
+            label: button_data.label,
+            href: button_data.href,
+          } %}
+        </div>
+      {% endif %}
+    </div>
   </div>
 </div>

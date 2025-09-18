@@ -1,6 +1,10 @@
 /* @file Styles for storybook docs. */
 
-.sbdocs {
+.sbdocs .story__description {
+  * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+    margin-block-start: 2.5rem;
+  }
+
   p {
     font-size: 1rem;
     line-height: 1.2;
@@ -14,11 +18,8 @@
     margin-block-start: .5rem;
   }
 
-  * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
-    margin-block-start: 2.5rem;
-  }
-
   blockquote p {
     color: tomato;
   }
 }
+
