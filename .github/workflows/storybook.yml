@@ -6,6 +6,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environmnet:
+      name: github-pages
     permissions:
       id-token: write
       pages: write
