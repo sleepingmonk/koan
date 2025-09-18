@@ -1,9 +1,0 @@
-<script>
-  // Detect if running on GitHub Pages and set base path
-  if (window.location.hostname.endsWith('github.io')) {
-    const repoName = window.location.pathname.split('/')[1];
-    const base = document.createElement('base');
-    base.setAttribute('href', `/${repoName}/`);
-    document.head.prepend(base);
-  }
-</script>

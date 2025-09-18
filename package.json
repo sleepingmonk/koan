@@ -19,7 +19,8 @@
     "scheme": "cssjson stories/css/scheme-default.css -o stories/assets/scheme.json && cssjson -h",
     "sprite": "svg-sprite -s --symbol-dest public/ --symbol-sprite icons.svg stories/assets/icons/*.svg && node stories/assets/iconsJSON.js stories/assets/icons",
     "storybook": "source $HOME/.nvm/nvm.sh && nvm use && storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build-storybook-gh": "STORYBOOK_GITHUB_PAGES_BUILD=true storybook build"
   },
   "keywords": [],
   "author": "",
