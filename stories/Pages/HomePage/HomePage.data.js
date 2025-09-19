@@ -7,7 +7,7 @@ export default {
       scheme: 'dark',
       section_classes: ['hero'],
       align_items: "center",
-      background_image_url: "/image.jpg",
+      background_image_url: `${basePath}/image.jpg`,
       bg_tint: true,
       heading: "Koan",
       text: "<p>The Zen of UI</p>",

@@ -7,7 +7,7 @@ export default {
       scheme: "dark",
       // Section alignment: start, center, end.
       align_items: "start",
-      background_image_url: "/image.jpg",
+      background_image_url: `${basePath}/image.jpg`,
       bg_tint: true,
       brow_data: false,
       heading: 'Section Padding Demo',

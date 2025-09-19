@@ -58,7 +58,7 @@ export default {
   overlay: {
     variant: "overlay",
     media: {
-      url: "/image.jpg",
+      url: `${basePath}/image.jpg`,
     },
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
