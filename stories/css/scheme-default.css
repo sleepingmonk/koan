@@ -4,7 +4,7 @@
   font-style: 'normal';
   font-weight: 400;
   font-display: swap;
-  src: url(/Fonts/Zen_Kaku_Gothic_Antique/ZenKakuGothicAntique-Regular.ttf) format('truetype');
+  src: url(../Fonts/Zen_Kaku_Gothic_Antique/ZenKakuGothicAntique-Regular.ttf) format('truetype');
 }
 
 @font-face {
@@ -12,7 +12,7 @@
   font-style: 'normal';
   font-weight: 400;
   font-display: swap;
-  src: url(/Fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf) format('truetype');
+  src: url(../Fonts/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf) format('truetype');
 }
 
 /* Variables. */
