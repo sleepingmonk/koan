@@ -1,4 +1,5 @@
-import Button from "../../Atoms/Button/Button.twig";
+const isGithubPagesBuild = import.meta.env.STORYBOOK_GITHUB_PAGES_BUILD;
+const basePath = isGithubPagesBuild ? '/koan' : '';
 
 export default {
   default: {
