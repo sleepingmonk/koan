@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   workflow_dispatch:
   push:
-    paths: ["src/stories/**"]
+    tags: "2.*"
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
