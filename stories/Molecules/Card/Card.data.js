@@ -1,8 +1,10 @@
+const isGithubPagesBuild = import.meta.env.STORYBOOK_GITHUB_PAGES_BUILD;
+const basePath = isGithubPagesBuild ? '/koan' : '';
 
 export default {
   default: {
     variant: "default",
-    media: '<img src="/image.jpg" />',
+    media: `<img src="${basePath}/image.jpg" />`,
     icon_data: {
       icon: "speaker",
       color: false,

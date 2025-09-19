@@ -6,7 +6,7 @@ import '../stories/css/scheme-default.css';
 import './docs.css';
 
 export default {
-  tags: ['autodocs'], // Enables auto-generated documentation for all stories
+  tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
     actions: { argTypesRegex: "^on[A-Z].*" },

@@ -15,10 +15,6 @@ const config = {
     "options": {}
   },
   viteFinal: async (config, { configType }) => {
-    // Check if building for production on GitHub Pages
-    if (configType === 'PRODUCTION' && process.env.STORYBOOK_GITHUB_PAGES_BUILD) {
-      config.base = '/koan/';
-    }
 
     return mergeConfig(config, {
       resolve: {
