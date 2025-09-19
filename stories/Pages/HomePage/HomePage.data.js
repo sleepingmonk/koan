@@ -1,6 +1,3 @@
-const isGithubPagesBuild = import.meta.env.STORYBOOK_GITHUB_PAGES_BUILD;
-const basePath = isGithubPagesBuild ? '/koan' : '';
-
 export default {
   default: {
     section_1: {
@@ -8,7 +5,7 @@ export default {
       scheme: 'dark',
       section_classes: ['hero'],
       align_items: "center",
-      background_image_url: `${basePath}/image.jpg`,
+      background_image_url: `image.jpg`,
       bg_tint: true,
       heading: "Koan",
       text: "<p>The Zen of UI</p>",
@@ -56,7 +53,7 @@ export default {
       text: `
         <div class="branding">
           <svg viewBox="0 0 100 50" class="icon">
-            <use xlink:href="/icons.svg#BionicStudioLogo-wm"></use>
+            <use xlink:href="icons.svg#BionicStudioLogo-wm"></use>
           </svg>
         </div>`,
       content_data: `

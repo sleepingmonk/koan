@@ -1,6 +1,3 @@
-const isGithubPagesBuild = import.meta.env.STORYBOOK_GITHUB_PAGES_BUILD;
-const basePath = isGithubPagesBuild ? '/koan' : '';
-
 export default {
   default: {
     section_1: {
@@ -9,7 +6,7 @@ export default {
       scheme: "dark",
       // Section alignment: start, center, end.
       align_items: "start",
-      background_image_url: `${basePath}/image.jpg`,
+      background_image_url: `image.jpg`,
       bg_tint: true,
       brow_data: false,
       heading: 'Section Padding Demo',

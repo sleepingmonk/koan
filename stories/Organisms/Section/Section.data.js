@@ -1,6 +1,3 @@
-const isGithubPagesBuild = import.meta.env.STORYBOOK_GITHUB_PAGES_BUILD;
-const basePath = isGithubPagesBuild ? '/koan' : '';
-
 export default {
   default: {
     first_component: true,
@@ -130,7 +127,7 @@ export default {
   bg_image: {
     first_component: false,
     scheme: "dark",
-    background_image_url: `${basePath}/image.jpg`,
+    background_image_url: `image.jpg`,
     bg_tint: "secondary",
     brow_data: {
       variant: "default",

@@ -1,10 +1,7 @@
-const isGithubPagesBuild = import.meta.env.STORYBOOK_GITHUB_PAGES_BUILD;
-const basePath = isGithubPagesBuild ? '/koan' : '';
-
 export default {
   default: {
     variant: "default",
-    media: `<img src="${basePath}/image.jpg" />`,
+    media: `<img src="image.jpg" />`,
     icon_data: {
       icon: "speaker",
       color: false,
@@ -58,7 +55,7 @@ export default {
   overlay: {
     variant: "overlay",
     media: {
-      url: `${basePath}/image.jpg`,
+      url: `image.jpg`,
     },
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
