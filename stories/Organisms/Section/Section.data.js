@@ -127,7 +127,7 @@ export default {
   bg_image: {
     first_component: false,
     scheme: "dark",
-    background_image_url: `image.jpg`,
+    background_image_url: `../image.jpg`,
     bg_tint: "secondary",
     brow_data: {
       variant: "default",
