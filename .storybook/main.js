@@ -7,13 +7,16 @@ const config = {
   "stories": [
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
+
   "addons": [
     "@storybook/addon-docs",
   ],
+
   "framework": {
     "name": "@storybook/html-vite",
     "options": {}
   },
+
   viteFinal: async (config, { configType }) => {
 
     return mergeConfig(config, {
@@ -35,5 +38,9 @@ const config = {
       ],
     });
   },
+
+  core: {
+    disableWhatsNewNotifications: true
+  }
 };
 export default config;
