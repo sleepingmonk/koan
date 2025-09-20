@@ -21,6 +21,7 @@ for (const key in rows) {
 export default {
   title: 'Scheme/Colors',
   component: Colors,
+  tags: ['!autodocs'],
   parameters: {
     layout: 'padded',
     docs: {

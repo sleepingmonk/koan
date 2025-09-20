@@ -1,0 +1,73 @@
+
+import data from './Card.data';
+import Card from './Card.twig';
+import readme from './Card.mdx?raw';
+import './Card.css';
+import '../../../Components/Atoms/Button/Button.css';
+import '../../../Components/Atoms/Icon/Icon.css';
+
+export default {
+  title: 'Components/Molecules/Card',
+  component: Card,
+  tags: ['autodocs'],
+  parameters: {
+    layout: 'centered',
+    docs: {
+      description: {
+        component: readme,
+      }
+    }
+  },
+  argTypes: {
+    variant: {
+      description: "The Card variant. Often set on the `Cards` component.",
+      table: { defaultValue: { summary: 'default' }},
+      control: { type: 'select' },
+      options: ['default', 'bordered-center', 'media-left', 'media-right', 'overlay', 'icon'],
+    },
+    media: {
+      description: "Image, Video",
+      table: { defaultValue: { summary: false }},
+    },
+    icon_data: {
+      description: "Data to pass to the Icon component.",
+      table: { defaultValue: { summary: false }},
+    },
+    heading: {
+      description: "A heading.",
+      table: { defaultValue: { summary: false }},
+    },
+    text: {
+      description: "A heading.",
+      table: { defaultValue: { summary: false }},
+    },
+    button: {
+      description: "`button.label`, `button.href`, `button.variant`",
+      table: { defaultValue: { summary: false }},
+    },
+  },
+};
+
+// Create Template for variant templates to bind to.
+const Template = ({ ...args }) => {
+  return Card({ ...args });
+};
+
+// Bind the Default component variant for this component.
+export const Default = Template.bind({});
+Default.args = data.default;
+
+export const BorderedCenter = Template.bind({});
+BorderedCenter.args = data.bordered_center;
+
+export const MediaLeft = Template.bind({});
+MediaLeft.args = data.media_left;
+
+export const MediaRight = Template.bind({});
+MediaRight.args = data.media_right;
+
+export const Overlay = Template.bind({});
+Overlay.args = data.overlay;
+
+export const Icon = Template.bind({});
+Icon.args = data.icon;

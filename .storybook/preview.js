@@ -6,7 +6,7 @@ import '../stories/css/scheme-default.css';
 import './docs.css';
 
 export default {
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -18,10 +18,10 @@ export default {
     options: {
       storySort: {
         order: [
-          'Page Demos',
+          'Page-Demos',
           'Documentation', ['Intro'],
           'Scheme', ['Colors', 'Fonts', 'Sizes'],
-          'Layout Demos',
+          'Layout-Demos',
           'Components',
         ],
       },

@@ -17,7 +17,7 @@ export default function DocsTemplate({ of }) {
       </div>
       <Primary />
       <Controls />
-      <Stories />
+      {/* <Stories /> */}
     </>
   );
 };
