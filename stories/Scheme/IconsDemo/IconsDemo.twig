@@ -1,0 +1,20 @@
+{% set classes = [
+  'icons-demo',
+] %}
+
+<div class="{{ classes|join(' ') }}">
+  <div class="grid">
+    {% for icon in icons %}
+      <div class="icon__item" data-icon-name="{{ icon }}">
+        <div class="icon__icon">
+          <div class="icon__copied"><p>Copied!</p></div>
+          {% include "@atoms/Icon/Icon.twig" with { icon: icon, color: 'var(--color-text)' } %}
+        </div>
+        <div class="icon__label">
+          {{ icon }}
+          {% include "@atoms/Icon/Icon.twig" with { icon: 'copy-outline', color: 'var(--color-text)' } %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

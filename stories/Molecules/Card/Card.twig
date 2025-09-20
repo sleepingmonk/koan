@@ -1,14 +1,16 @@
 {% set h = first_component ? 'h1' : 'h2' %}
 {% set h = variant == 'icon' ? 'h3' : h %}
 {% set tag = variant == 'icon' ? 'a' : 'div' %}
-{% set tag_href = tag == 'a' ? 'href="' ~ {{button_data.href}} ~ '"' : '' %}
+{% set tag_href = tag == 'a' ? 'href="' ~ button_data.href ~ '"' : '' %}
+
+{% set tag_target = tag == 'a' and button_data.external ? 'target="_blank"' : '' %}
 {% set type = variant ? 'card--' ~ variant : 'card--default' %}
 {% set classes = [
   'card',
   type,
 ] %}
 
-<{{tag}} class="{{ classes|join(' ') }}" {{ tag_href }}>
+<{{tag}} class="{{ classes|join(' ') }}" {{ tag_href }} {{ tag_target }}>
   <div class="switcher">
     {% if icon_data and variant == 'icon' %}
       {% include "@atoms/Icon/Icon.twig" with icon_data %}

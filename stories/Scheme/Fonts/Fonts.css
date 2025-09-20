@@ -1,6 +1,7 @@
 .font__group {
   border: 1px solid var(--color-base-dark-x);
   width: 100%;
+  word-wrap: anywhere;
 }
 
 .font__group > .box:first-of-type {

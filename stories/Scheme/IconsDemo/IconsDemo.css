@@ -1,0 +1,55 @@
+.icons-demo {
+  --grid-min-width: 13ch;
+
+  .icon__item {
+    cursor: pointer;
+    border: 1px solid #000;
+
+    .icon__copied {
+      background-color: var(--color-accent);
+      display: none;
+      position: absolute;
+      bottom: 0;
+      inline-size: 100%;
+      text-align: center;
+    }
+  }
+
+  .icon__item--copied .icon__copied {
+    display: block;
+  }
+
+  .icon__item > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon__icon {
+    position: relative;
+    padding: var(--s0);
+
+    .icon {
+      inline-size: 100%;
+      block-size: auto;
+    }
+  }
+
+  .icon__label {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 1px solid #000;
+    padding: var(--s-5);
+    background-color: #fff;
+    font-size: var(--s-2);
+    line-height: var(--s-1);
+    word-wrap: anywhere;
+
+    .icon {
+      inline-size: var(--s-1);
+      block-size: auto;
+      margin-inline-start: var(--s-5);
+    }
+  }
+}
+

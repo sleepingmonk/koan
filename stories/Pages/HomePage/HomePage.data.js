@@ -13,7 +13,10 @@ export default {
         <div class="center stack" style="text-align: center;">
           <p>An ultra-light design system built on clarity and flow.<br />
           <strong>Algorithmic Layout Primitives, Atomic Design Principles, and a powerful Scheme System</strong>, clear away the noise so you can build effortless interfaces that just work.</p>
-          <div class="switcher"><a class="button button--small" href="https://www.drupal.org/project/koan" target="_blank" rel="noopener">Get for Drupal</a> <a class="button button--small" href="https://npmjs.com/package/@bionic/react-koan" target="_blank" rel="noopener">Get for React</a></div>
+          <div class="switcher">
+            <a class="button button--small" href="https://www.drupal.org/project/koan" target="_blank" rel="noopener">Get for Drupal</a>
+            <a class="button button--small" href="https://npmjs.com/package/@bionic/react-koan" target="_blank" rel="noopener">Get for React</a>
+          </div>
         </div>
       `,
       button_data: false,
@@ -44,6 +47,74 @@ export default {
         <p>Whether you're building a new project from scratch or looking to streamline an existing one, Koan provides a solid foundation that scales with your needs. Dive into the <a href="/?path=/docs/documentation-intro--docs">documentation</a>, explore the components, and see how Koan can transform your workflow.</p>
         <div class="switcher"><a class="button button--small" href="https://www.drupal.org/project/koan" target="_blank" rel="noopener">Get Koan for Drupal</a> <a class="button button--small" href="https://https://npmjs.com/package/@bionic/react-koan" target="_blank" rel="noopener">Get Koan for React</a></div>
       `,
+    },
+    foundations: {
+      scheme: "primary-dark-xx",
+      align_items: "center",
+      heading: 'Foundations',
+      text: "<p>For more in-depth study of the principles behind Koan, check out the work of these people.</p>",
+      content_layout: "container",
+      content_data: {
+        // Cards component data.
+        variant: "multicolor",
+        card_width: "35ch",
+        card_variant: "",
+        items: [
+          {
+            variant: "icon",
+            media: false,
+            icon_data: {
+              icon: "flame",
+              color: false,
+
+            },
+            heading: "Every Layout",
+            text: "<p>Haydon Pickering <br />& Andy Bell</p>",
+            button_data: {
+              label: "Button",
+              href: "https://every-layout.dev/rudiments/boxes/",
+              external: true,
+              variant: "primary",
+            },
+
+          },
+          {
+            variant: "icon",
+            media: false,
+            icon_data: {
+              icon: "flame",
+              color: false,
+
+            },
+            heading: "Atomic Design",
+            text: "<span>Brad Frost</span>",
+            button_data: {
+              label: "Button",
+              href: "https://atomicdesign.bradfrost.com/table-of-contents/",
+              external: true,
+              variant: "primary",
+            },
+
+          },
+          {
+            variant: "icon",
+            media: false,
+            icon_data: {
+              icon: "flame",
+              color: false,
+
+            },
+            heading: "Bionic Studio",
+            text: "Calvin Tyndall",
+            button_data: {
+              label: "Button",
+              href: "https://bionic.studio",
+              external: true,
+              variant: "primary",
+            },
+          },
+        ],
+      },
     },
     section_3: {
       first_component: false,

@@ -21,12 +21,13 @@ for (const key in rows) {
 export default {
   title: 'Scheme/Fonts',
   component: Fonts,
+  tags: ["!autodocs"],
   parameters: {
     layout: 'padded',
     docs: {
       description: {
         component: readme
-      }
+      },
     }
   },
   argTypes: {

@@ -99,12 +99,12 @@
   justify-content: flex-start;
   align-items: center;
   padding: var(--s2) var(--s5);
-  font-size: var(--s3);
-  line-height: var(--s4);
+  font-size: var(--s0);
+  line-height: var(--s1);
   text-align: center;
   text-decoration: none;
   background: var(--color-primary-dark-xx);
-  box-shadow: 2px 2px 12px var(--color-base);
+  /* box-shadow: 2px 2px 12px var(--color-base); */
 }
 
 .card--icon .card .box,

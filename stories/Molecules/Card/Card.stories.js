@@ -6,7 +6,7 @@ import './Card.css';
 import '../../Atoms/Button/Button.css';
 
 export default {
-  title: 'Components/Molecules/Card',
+  title: 'Molecules/Card',
   component: Card,
   parameters: {
     layout: 'centered',

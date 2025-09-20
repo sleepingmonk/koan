@@ -5,8 +5,17 @@
 {% set styles = [
 ] %}
 
+{% set foundationsCards %}
+  {% include "@organisms/Cards/Cards.twig" with foundations.content_data %}
+{% endset %}
+
+{% set foundations = foundations|merge({
+  content_data: foundationsCards,
+}) %}
+
 <div class="{{ classes|join(' ') }}" style="{{ styles|join('') }}" >
   {% include "@organisms/Section/Section.twig" with section_1 %}
   {% include "@organisms/Section/Section.twig" with section_2 %}
+  {% include "@organisms/Section/Section.twig" with foundations %}
   {% include "@organisms/Section/Section.twig" with section_3 %}
 </div>

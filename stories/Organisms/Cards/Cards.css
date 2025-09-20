@@ -2,23 +2,6 @@
   --gap: var(--s2);
 }
 
-/* Icon Cards */
-.cards .card.card--icon {
-  --color: var(--color-light);
-  --heading-color: var(--color-light);
-
-  color: var(--color);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background: gray;
-  padding: var(--s2) var(--s5);
-  font-size: var(--s3);
-  line-height: var(--s4);
-  text-align: center;
-}
-
 /* Icon Card Variants */
 
 .cards--multicolor .card--icon:nth-of-type(5n + 1) {
