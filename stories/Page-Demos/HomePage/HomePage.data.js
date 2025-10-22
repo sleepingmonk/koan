@@ -8,7 +8,9 @@ export default {
       background_image_url: `../image.jpg`,
       bg_tint: true,
       heading: "Koan",
-      text: "<p>The Zen of UI</p>",
+      text: `<p>The Zen of UI</p>
+      <img height="100" src="../../../logo.svg" alt="Koan Logo" class="logo" />
+      `,
       content_data: `
         <div class="center stack" style="text-align: center;">
           <p>An ultra-light design system built on clarity and flow.<br />

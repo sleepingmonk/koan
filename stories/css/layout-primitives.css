@@ -223,6 +223,7 @@
 
 .stack > * {
   margin-block: 0;
+  inline-size: 100%;
 }
 
 .stack > * + * {

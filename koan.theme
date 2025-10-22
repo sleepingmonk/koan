@@ -12,14 +12,17 @@ foreach (glob($includes_path) as $filename) {
 }
 
 /**
- * Implements hook_library_info_build().
+ * Implements hook_library_info_alter().
  */
-function koan_library_info_build() {
+function koan_library_info_alter(&$libraries, $extension) {
+  if ($extension !== 'koan') {
+    return;
+  }
+  // Add Drupal library entries for storybook libs.
   $extensions = ['css', 'js'];
   $directory = 'themes/contrib/koan/lib/stories';
   $extensions = array_map('preg_quote', $extensions);
   $extensions = implode('|', $extensions);
-  $libraries = [];
   $file_scan = \Drupal::service('file_system')->scanDirectory($directory, "/{$extensions}$/");
 
   foreach ($file_scan as $file) {
@@ -41,5 +44,4 @@ function koan_library_info_build() {
         break;
     }
   }
-  return $libraries;
 }

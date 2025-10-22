@@ -87,6 +87,11 @@
   border-color: var(--color);
 }
 
+.section a {
+  color: var(--color);
+  text-decoration: none;
+}
+
 /* Variants */
 
 .section--align-center .section__header,

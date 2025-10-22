@@ -1,7 +1,7 @@
 name: Koan
 type: theme
 description: 'Drupal theme with Storybook, using algorithmic layout.'
-core_version_requirement: ^8 || ^9 || ^10
+core_version_requirement: ^10 || ^11
 base theme: false
 
 libraries:
@@ -17,3 +17,9 @@ regions:
   secondary_footer: Secondary Footer
   drawer: Drawer
   footer: Footer
+
+components:
+  namespaces:
+    atoms: ./stories/Components/Atoms
+    molecules: ./stories/Components/Molecules
+    organisms: ./stories/Components/Organisms
