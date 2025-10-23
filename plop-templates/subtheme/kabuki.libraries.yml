@@ -1,0 +1,9 @@
+global:
+  css:
+    # Uncomment to override Koan CSS.
+    # base:
+    #   css/elements.css:  { minified: true, preprocess: false }
+    # layout:
+    #   css/layout-primitives.css:  { minified: true, preprocess: false }
+    theme:
+      css/scheme-default.css:  { minified: true, preprocess: false }

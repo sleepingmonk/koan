@@ -1,0 +1,28 @@
+name: {{snakeCase name}}
+type: theme
+description: 'Subtheme for Koan'
+core_version_requirement: ^10 || ^11
+base theme: koan
+
+libraries:
+  - {{snakeCase name}}/global
+
+regions:
+  header: Header
+  navigation: Navigation
+  messaging: Messaging
+  title: Title
+  tabs: Tabs
+  content: Content
+  secondary_footer: Secondary Footer
+  drawer: Drawer
+  footer: Footer
+
+components:
+  namespaces:
+    atoms: ../../contrib/koan/stories/Components/Atoms
+    molecules: ../../contrib/koan/stories/Components/Molecules
+    organisms: ../../contrib/koan/stories/Components/Organisms
+    {{camelCase name}}Atoms: ./Components/Atoms
+    {{camelCase name}}Molecules: ./Components/Molecules
+    {{camelCase name}}Organisms: ./Components/Organisms

@@ -6,15 +6,16 @@ This library uses algorithmic/intrinsic layout techniques and 13 "[Layout Primit
 
 Layout Primitives are composed into Atomic Components, that are used to build templates and pages.
 
-For more details about the methodologies used in this component library see: https://github.com/sleepingmonk/koan/tree/master/src/stories/Docs/Intro
+For more details about the methodologies used in this component library see: https://sleepingmonk.github.io/koan
 
 
-External References: 
+External References:
 
   - https://every-layout.dev/rudiments/
   - https://aneventapart.com/news/post/designing-intrinsic-layouts-aea-video
   - https://atomicdesign.bradfrost.com/table-of-contents/
-  
+  - https://calvint.com creator of Koan.
+  - https://bionic.studio development and maintenance.
 
 ## Installation
 
@@ -24,24 +25,33 @@ External References:
 
 ### Use
   - Install with composer to your drupal project.
-    - COMING SOON
+    - `composer install drupal/koan`
   - Enable the base theme in drupal via the UI or with drush:
-    - `drush en koan`
-  - Create a new theme with the following line in your `info.yml` file:  `base theme: koan` 
-  - Include twig templates into your theme via `@atoms/button.twig`, etc.  COMING SOON
+    - `drush theme:install koan`
+  - Create a new theme with the following line in your `info.yml` file:  `base theme: koan` **OR** use plop to generate a new subtheme in your `themes/custom` directory:
+    - cd to `themes/contrib/koan`
+    - `nvm use` (or some other method) to set the appropriate node version. (see `.nvmrc`)
+    - `npm install`
+    - `npm run plop`
+    - Follow the prompts to select `subtheme` and enter a name for your theme.
+    - Theme will be generated in your `themes/custom` dir ready for development.
+    - `drush theme:install [your_theme_name]`
+  - Include Koan templates into your custom theme via `@atoms/button.twig`, etc.
+  - Include custom components from your subtheme via `[yourThemeNameAtoms]/[myAtom].twig`, etc.
+  - Be sure to attach the proper libraries. See [Docs](https://sleepingmonk.github.io/koan/?path=/docs/documentation-drupalintegration--docs#drupal-libraries) for more info.
 
 ## Pattern Library Development
   **For development of the pattern library only. Not required to use this as a base theme.**
 
 ### Requirements
 
-  - Node 18
+  - See `.nvmrc` for required node version.
 
 ### Installation
 
   - Clone this repo and cd to the directory
   - `nvm use`: to use the specified version of Node. (If using nvm to manage node. You may need to install the appropriate version.)
-  - `npm install`: to install the required development packages. 
+  - `npm install`: to install the required development packages.
   - `npm run storybook`: to start storybook. It will open a new browser window.
 
 ### Creating Components
@@ -57,14 +67,10 @@ The new component will appear at `src/stories/Molecules/Card`
 For more information about how to develop components for this library, see the "Documentation" section on the sidebar of Storybook.
 
 
-## Projects using Koan
-  - https://WayOfBJJ.com
-
-
 ## Links
-* Project Page:   https://koan.netlify.app/?path=/docs/documentation-intro--default
-* Documentation:  https://koan.netlify.app/?path=/docs/documentation-intro--default
-* Support:        https://drupal
+* Project Page:   https://drupal.org/project/koan
+* Documentation:  https://sleepingmonk.github.io/koan
+* Support:        https://drupal.org/project/koan
 
 ## License
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.html

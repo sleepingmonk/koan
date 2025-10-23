@@ -1,0 +1,45 @@
+/* Variables. */
+:root {
+
+  --ratio: 1.30;
+  --measure: 60ch;
+  --max-width: 126ch;
+  --min-width: 40ch;
+
+  /* These fonts are defined in Koan: scheme-default.css */
+  /* Feel free to import your own at the top of this file. */
+  --font-primary: 'Zen Kaku Gothic Antique', sans-serif;
+  --font-secondary: 'Zen Maru Gothic', sans-serif;
+
+  --color-light: #F9FAF9;
+  --color-dark: #1A1A1A;
+
+  --color-base-dark-xx: #404040;
+  --color-base-dark-x:  #707070;
+  --color-base: #B0B0B0;
+  --color-base-light-x:  #E0E0E0;
+  --color-base-light-xx:  #F2F2F2;
+
+  --color-primary-dark-xx: #2D3A80;
+  --color-primary-dark-x: #4455AA;
+  --color-primary: #6677CC;
+  --color-primary-light-x: #C5CEEC;
+  --color-primary-light-xx: #E9ECF8;
+
+  --color-accent-dark-xx: #805819;
+  --color-accent-dark-x: #B97F25;
+  --color-accent: #E6A93C;
+  --color-accent-light-x: #FFD999;
+  --color-accent-light-xx: #FFF3E0;
+
+  /* Contextual variables: can be overridden at the component level to affect elements within. Allows you to set variant color schemes in component variants. */
+
+  --bg: var(--color-light);
+  --heading-color: var(--color-primary-dark-xx);
+  --accent-color: var(--color-primary-dark-x);
+  --color: var(--color-dark);
+  --button-fg: var(--bg);
+  --button-bg: var(--accent-color);
+  --border-thin: 1px;
+  --border-normal: 2px;
+}
