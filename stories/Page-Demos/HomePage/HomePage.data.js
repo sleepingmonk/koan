@@ -9,7 +9,7 @@ export default {
       bg_tint: true,
       heading: "Koan",
       text: `<p>The Zen of UI</p>
-      <img height="100" src="../logo.svg" alt="Koan Logo" class="logo" />
+      <img height="100" src="logo.svg" alt="Koan Logo" class="logo" />
       `,
       content_data: `
         <div class="center stack" style="text-align: center;">
