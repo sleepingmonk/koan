@@ -23,41 +23,41 @@ module.exports = plop => {
     actions: [
       {
         type: "add",
-        path: "stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.twig",
+        path: "stories/Components/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.twig",
         templateFile: "plop-templates/Component/template.twig"
       },
       {
         type: "add",
-        path: "stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.stories.js",
+        path: "stories/Components/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.stories.js",
         templateFile: "plop-templates/Component/template.stories.js",
         data: { folder: "stories" }
       },
       {
         type: "add",
-        path: "stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.data.js",
+        path: "stories/Components/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.data.js",
         templateFile: "plop-templates/Component/template.data.js",
         data: { folder: "stories" }
       },
       {
         type: "modify",
-        path: "stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.stories.js",
+        path: "stories/Components/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.stories.js",
         pattern: "Other",
         template: "{{pascalCase typeOther}}",
         abortOnFail: false
       },
       {
         type: "add",
-        path: "stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.css",
+        path: "stories/Components/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.css",
         templateFile: "plop-templates/Component/template.css"
       },
       {
         type: "add",
-        path: "stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.js",
+        path: "stories/Components/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.js",
         templateFile: "plop-templates/Component/template.js"
       },
       {
         type: "add",
-        path: "stories/{{pascalCase type}}/{{pascalCase name}}/readme.md",
+        path: "stories/Components/{{pascalCase type}}/{{pascalCase name}}/readme.md",
         templateFile: "plop-templates/Component/template.md"
       }
     ]
@@ -105,7 +105,7 @@ module.exports = plop => {
       {
         type: "add",
         path: "../../custom/{{snakeCase name}}/{{snakeCase name}}.info.yml",
-        templateFile: "plop-templates/subtheme/kabuki.info.yml"
+        templateFile: "plop-templates/subtheme/kabuki.info"
       },
       {
         type: "add",

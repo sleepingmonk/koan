@@ -1,14 +1,20 @@
 
 import data from './{{pascalCase name}}.data';
 import {{pascalCase name}} from './{{pascalCase name}}.twig';
+import readme from './{{pascalCase name}}.mdx?raw';
 import './{{pascalCase name}}.css';
 // import './{{pascalCase name}}.js';
 
 export default {
-  title: '{{pascalCase type}}/{{pascalCase name}}',
+  title: 'Components/{{pascalCase type}}/{{pascalCase name}}',
   component: {{pascalCase name}},
   parameters: {
-
+    layout: 'centered',
+    docs: {
+      description: {
+        component: readme,
+      }
+    }
   },
   argTypes: {
     // Don't show the mock drupal attributes.
