@@ -1,0 +1,41 @@
+{##
+ #  Atomic templates should be as "dumb" as possible.
+ #
+ #  Styles should be applied as high up the DOM as possible so they can cascade
+ #  down to lower elements.
+ #}
+
+{#
+  Available variables:
+    main:
+    variant:
+    attributes: drupalAttribute()
+#}
+
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'drop-cluster--' ~ variant : 'drop-cluster--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'drop-cluster',
+  'cluster',
+  variant ? 'drop-cluster--' ~ variant : 'drop-cluster--default',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <label>
+    <input class="drop-cluster__toggle" type='checkbox'>
+    <div class="drop-cluster__inner">
+      <div class="drop-cluster__button" aria-label="Open Menu">
+        <div class="drop-cluster__button-bar"></div>
+        <div class="drop-cluster__button-bar"></div>
+        <div class="drop-cluster__button-bar"></div>
+      </div>
+      <ul class="cluster drop-cluster__items">
+        {{ items }}
+      </ul>
+    </div>
+  </label>
+</div>
