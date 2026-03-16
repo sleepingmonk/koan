@@ -1,0 +1,27 @@
+# Drawer
+
+Drawer is a simple component that is tucked out of the way and slides in from the edge of the screen. It is used to display additional content or options.
+
+It can be positioned as fixed (relative to viewport) or absolute (relative to container), and can be aligned to the start or end of the block or inline axis. The sliding functionality is achieved through CSS transitions and the `:checked` pseudo-class, allowing for a smooth and interactive user experience without the need for JavaScript.
+
+*Note: Ignore the wrapping html in the "Show code" section of the storybook, it's only there to demonstrate the difference between absolute and fixed positioning. You only care about the div with class `drawer` and everything in it.*
+
+<details>
+  <summary>Inherited CSS Variables:</summary>
+  - `--drawer-color` defaults to `var(--color-light)`
+    - The background color of the drawer content.
+  - `--drawer-toggle-color` defaults to `var(--color-accent)`
+    - The color of the drawer toggle icon.
+  - `--drawer-inline-size` defaults to `30ch`
+    - The inline size (width) of the drawer content when positioned inline.
+</details>
+
+<details>
+  <summary>Twig Variables:</summary>
+  ```
+  variant: "default | block-start | block-end | inline-start | inline-end",
+  position: "fixed | absolute",
+  content: "Your content goes here",
+  ...,
+  ```
+</details>

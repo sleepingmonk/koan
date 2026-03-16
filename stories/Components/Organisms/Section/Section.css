@@ -66,10 +66,6 @@
   inline-size: 100%;
 }
 
-.section .section__main > * {
-  inline-size: 100%;
-}
-
 .section .section__header {
   inline-size: 100%;
   text-shadow:

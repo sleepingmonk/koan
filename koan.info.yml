@@ -15,8 +15,8 @@ regions:
   tabs: Tabs
   content: Content
   secondary_footer: Secondary Footer
-  drawer: Drawer
   footer: Footer
+  drawer: Drawer
 
 components:
   namespaces:

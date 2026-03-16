@@ -1,0 +1,38 @@
+{##
+ #  Atomic templates should be as "dumb" as possible.
+ #
+ #  Styles should be applied as high up the DOM as possible so they can cascade
+ #  down to lower elements.
+ #}
+
+{#
+  Available variables:
+    main:
+    variant:
+    attributes: drupalAttribute()
+#}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'drawer',
+  variant ? 'drawer--' ~ variant : '',
+  'inline' in variant ? 'drawer--inline' : '',
+  'block' in variant ? 'drawer--block' : '',
+  position ? 'drawer--' ~ position : 'drawer--absolute',
+] %}
+
+{% set styles = styles ? styles : [] %}
+
+<div class="{{ classes|join(' ') }}">
+  <input type="checkbox" id="drawer-toggle" class="drawer__toggle" />
+  <label for="drawer-toggle" class="drawer__toggle-label">
+    <div class="drawer__toggle-icon"></div>
+  </label>
+  <div class="drawer__content">
+    <div class="box">
+      {{ content }}
+    </div>
+  </div>
+</div>
