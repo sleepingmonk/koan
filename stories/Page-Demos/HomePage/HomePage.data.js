@@ -17,7 +17,7 @@ export default {
           <strong>Algorithmic Layout Primitives, Atomic Design Principles, and a powerful Scheme System</strong>, clear away the noise so you can build effortless interfaces that just work.</p>
           <div class="switcher">
             <a class="button button--small" href="https://www.drupal.org/project/koan" target="_blank" rel="noopener">Get for Drupal</a>
-            <a class="button button--small" href="https://npmjs.com/package/@bionic/react-koan" target="_blank" rel="noopener">Get for React</a>
+            <a class="button button--small" href="https://www.npmjs.com/package/koan-astro" target="_blank" rel="noopener">Get for Astro</a>
           </div>
         </div>
       `,
@@ -47,7 +47,7 @@ export default {
         <p>A system that respects your creativity, your users, and your time. It gets out of the way, removes friction, and lets you build layouts and components that feel natural, consistent, and fast.</p>
         <h3>Get Started</h3>
         <p>Whether you're building a new project from scratch or looking to streamline an existing one, Koan provides a solid foundation that scales with your needs. Dive into the <a href="/?path=/docs/documentation-intro--docs">documentation</a>, explore the components, and see how Koan can transform your workflow.</p>
-        <div class="switcher"><a class="button button--small" href="https://www.drupal.org/project/koan" target="_blank" rel="noopener">Get Koan for Drupal</a> <a class="button button--small" href="https://https://npmjs.com/package/@bionic/react-koan" target="_blank" rel="noopener">Get Koan for React</a></div>
+        <div class="switcher"><a class="button button--small" href="https://www.drupal.org/project/koan" target="_blank" rel="noopener">Get Koan for Drupal</a> <a class="button button--small" href="https://www.npmjs.com/package/koan-astro" target="_blank" rel="noopener">Get Koan for Astro</a></div>
       `,
     },
     foundations: {

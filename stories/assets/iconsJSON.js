@@ -11,17 +11,17 @@
 // * stats each file to get the file size,
 // and writes the results to a JSON file
 
-const fs = require('fs');
-const path = require('path');
+import { readdirSync, lstatSync, writeFileSync } from 'fs';
+import { join, basename, parse, resolve } from 'path';
 
 // return an ordered list of files in the input dir, with full paths
 function listFilesSync(dir) {
   let fileList = [];
-  fs.readdirSync(dir).forEach((file) => {
-    const fullPath = path.join(dir, file);
+  readdirSync(dir).forEach((file) => {
+    const fullPath = join(dir, file);
     // use lstat so this does not follow dir symlinks
     // (otherwise this will include files from other dirs, which I don't want)
-    if (fs.lstatSync(fullPath).isDirectory()) {
+    if (lstatSync(fullPath).isDirectory()) {
       fileList = fileList.concat(listFilesSync(fullPath));
     } else {
       if (fullPath.includes('.svg')) {
@@ -34,8 +34,8 @@ function listFilesSync(dir) {
 
 // return an object with the file path and file size
 function fileAndSize(file) {
-  const fileBaseName = path.basename(file);
-  const fileName = path.parse(fileBaseName).name;
+  const fileBaseName = basename(file);
+  const fileName = parse(fileBaseName).name;
   return fileName;
 }
 
@@ -43,7 +43,7 @@ function fileAndSize(file) {
 const dirs = process.argv.slice(2);
 
 dirs.forEach((directory) => {
-  const fullDirPath = path.resolve(directory);
+  const fullDirPath = resolve(directory);
   console.log(`Processing dir '${fullDirPath}'...`);
 
   const fullFileList = listFilesSync(fullDirPath);
@@ -51,7 +51,7 @@ dirs.forEach((directory) => {
 
   const filesAndSizes = fullFileList.map(fileAndSize);
 
-  const outFile = `stories/assets/${path.basename(directory)}.json`;
-  fs.writeFileSync(outFile, JSON.stringify(filesAndSizes, null, 2));
+  const outFile = `stories/assets/${basename(directory)}.json`;
+  writeFileSync(outFile, JSON.stringify(filesAndSizes, null, 2));
   console.log(`Wrote file ${outFile}`);
 });
