@@ -1,5 +1,5 @@
 {% set variant_styles = [] %}
-{% set variant_styles = color ? variant_styles|merge(['--color: var(--color-' ~ color ~ ');']) : variant_styles %}
+{% set variant_styles = color ? variant_styles|merge(['color: var(--color-' ~ color ~ ');']) : variant_styles %}
 {% set icon_path = icon_path is not empty ? icon_path : 'icons.svg' %}
 {% set classes = [
   'icon-wrapper',
