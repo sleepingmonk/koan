@@ -8,11 +8,11 @@
       <div class="icon__item" data-icon-name="{{ icon }}">
         <div class="icon__icon">
           <div class="icon__copied"><p>Copied!</p></div>
-          {% include "@atoms/Icon/Icon.twig" with { icon: icon, color: 'accent-dark-x' } %}
+          {% include "@atoms/Icon/Icon.twig" with { icon: icon, color: 'dark' } %}
         </div>
         <div class="icon__label">
           {{ icon }}
-          {% include "@atoms/Icon/Icon.twig" with { icon: 'copy-outline', color: 'accent' } %}
+          {% include "@atoms/Icon/Icon.twig" with { icon: 'copy-outline', color: 'dark' } %}
         </div>
       </div>
     {% endfor %}
